@@ -11,25 +11,25 @@ import retrofit2.http.Query
 interface CacheApi {
 
     @GET("/orgs/{org}/actions/cache/usage")
-    fun getOrgCacheUsage(
+    suspend fun getOrgCacheUsage(
         @Path("org") org: String,
     ): CacheUsage
 
     @GET("/orgs/{org}/actions/cache/usage-by-repository")
-    fun getOrgCacheUsagePerRepositories(
+    suspend fun getOrgCacheUsagePerRepositories(
         @Path("org") org: String,
         @Query("per_page") perPage: Int = 30,
         @Query("page") page: Int = 1,
     ): CacheUsagePerRepo
 
     @GET("/repos/{owner}/{repo}/actions/cache/usage")
-    fun getRepoCacheUsage(
+    suspend fun getRepoCacheUsage(
         @Path("owner") owner: String,
         @Path("repo") repo: String
     ): RepositoryCacheUsage
 
     @GET("/repos/{owner}/{repo}/actions/caches")
-    fun getRepoCache(
+    suspend fun getRepoCache(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Query("per_page") perPage: Int = 30,
@@ -40,7 +40,7 @@ interface CacheApi {
     ): ActionCaches
 
     @DELETE("/repos/{owner}/{repo}/actions/caches")
-    fun deleteRepoCaches(
+    suspend fun deleteRepoCaches(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Query("key") key: String,
@@ -48,7 +48,7 @@ interface CacheApi {
     ): ActionCaches
 
     @DELETE("/repos/{owner}/{repo}/actions/caches/{cache_id}")
-    fun deleteRepoCache(
+    suspend fun deleteRepoCache(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("cache_id") cacheId: String,
