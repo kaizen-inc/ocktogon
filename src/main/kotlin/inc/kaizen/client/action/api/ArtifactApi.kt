@@ -11,7 +11,7 @@ import retrofit2.http.Query
 interface ArtifactApi {
 
     @GET("/repos/{owner}/{repo}/actions/artifacts")
-    fun getRepoArtifacts(
+    suspend fun getRepoArtifacts(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Query("per_page") perPage: Int = 30,
@@ -20,21 +20,21 @@ interface ArtifactApi {
     ): Artifacts
 
     @GET("/repos/{owner}/{repo}/actions/artifacts/{artifact_id}")
-    fun getRepoArtifact(
+    suspend fun getRepoArtifact(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("artifact_id") artifactId: String
     ): Artifact
 
     @DELETE("/repos/{owner}/{repo}/actions/artifacts/{artifact_id}")
-    fun deleteRepoArtifact(
+    suspend fun deleteRepoArtifact(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("artifact_id") artifactId: String
     ): Response<Unit>
 
     @GET("/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}")
-    fun downloadRepoArtifact(
+    suspend fun downloadRepoArtifact(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("artifact_id") artifactId: String,
@@ -42,7 +42,7 @@ interface ArtifactApi {
     ): Response<Unit>
 
     @GET("/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts")
-    fun getWorkflowRunRepoArtifacts(
+    suspend fun getWorkflowRunRepoArtifacts(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("run_id") runId: String,
