@@ -10,7 +10,7 @@ repositories {
     mavenCentral()
     maven {
 		name = "GitHubPackages"
-		url = uri("https://maven.pkg.github.com/kaizen-inc/*")
+		url = uri("https://maven.pkg.github.com/kaizen-inc/Podium")
 		credentials {
 			username = System.getenv("GITHUB_ACTOR")
 			password = System.getenv("GITHUB_TOKEN")
