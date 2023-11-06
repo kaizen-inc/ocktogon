@@ -11,7 +11,7 @@ repositories {
     maven {
         url = "https://maven.pkg.github.com/kaizen-inc/Podium"
         credentials {
-            username GITHUB_USER
+            username GITHUB_ACTOR
             password GITHUB_TOKEN
         }
     }
