@@ -20,7 +20,7 @@ jobs:
           arguments: build
         env:
           GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
       - uses: actions/upload-artifact@v3
         with:
           name: Artifacts
