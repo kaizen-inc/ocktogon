@@ -19,8 +19,8 @@ jobs:
         with:
           arguments: build
         env:
-          GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_ACTOR: ${{ secrets.ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
       - uses: actions/upload-artifact@v3
         with:
           name: Artifacts
