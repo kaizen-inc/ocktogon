@@ -11,8 +11,8 @@ repositories {
     maven {
         url = "https://maven.pkg.github.com/kaizen-inc/Podium"
         credentials {
-            username = project.GITHUB_ACTOR?: System.getenv("GITHUB_ACTOR")
-            password = project.GITHUB_TOKEN?: System.getenv("GITHUB_TOKEN")
+            username = project.hasProperty("GITHUB_ACTOR")? project.GITHUB_ACTOR: System.getenv("GITHUB_ACTOR")
+            password = project.hasProperty("GITHUB_TOKEN")? project.GITHUB_TOKEN: System.getenv("GITHUB_TOKEN")
         }
     }
 }
@@ -56,8 +56,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/kaizen-inc/ocktogon")
             credentials {
-                username = project.GITHUB_ACTOR?: System.getenv("GITHUB_ACTOR")
-                password = project.GITHUB_TOKEN?: System.getenv("GITHUB_TOKEN")
+                username = project.hasProperty("GITHUB_ACTOR")? project.GITHUB_ACTOR: System.getenv("GITHUB_ACTOR")
+                password = project.hasProperty("GITHUB_TOKEN")? project.GITHUB_TOKEN: System.getenv("GITHUB_TOKEN")
             }
         }
     }
