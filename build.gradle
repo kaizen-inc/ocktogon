@@ -4,18 +4,17 @@ plugins {
 }
 
 group = 'inc.kaizen.client'
-version = '0.1'
+version = '1.0'
 
 repositories {
     mavenCentral()
     maven {
-		name = "GitHubPackages"
-		url = uri("https://maven.pkg.github.com/kaizen-inc/Podium")
-		credentials {
-			username = System.getenv("GITHUB_ACTOR")
-			password = System.getenv("GITHUB_TOKEN")
-		}
-	}
+        url = "https://maven.pkg.github.com/kaizen-inc/Podium"
+        credentials {
+            username = project.hasProperty("GITHUB_ACTOR")? project.GITHUB_ACTOR: System.getenv("GITHUB_ACTOR")
+            password = project.hasProperty("GITHUB_TOKEN")? project.GITHUB_TOKEN: System.getenv("GITHUB_TOKEN")
+        }
+    }
 }
 
 dependencies {
@@ -37,6 +36,7 @@ dependencies {
     testImplementation "io.kotest:kotest-property:$version"
 
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'com.jayway.jsonpath:json-path:2.8.0'
 
     def mockkVersion = "1.13.2"
     testImplementation "io.mockk:mockk:${mockkVersion}"
@@ -56,8 +56,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/kaizen-inc/ocktogon")
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = project.hasProperty("GITHUB_ACTOR")? project.GITHUB_ACTOR: System.getenv("GITHUB_ACTOR")
+                password = project.hasProperty("GITHUB_TOKEN")? project.GITHUB_TOKEN: System.getenv("GITHUB_TOKEN")
             }
         }
     }

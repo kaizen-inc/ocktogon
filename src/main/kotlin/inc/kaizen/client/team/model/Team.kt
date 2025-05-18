@@ -1,0 +1,20 @@
+data class Team(
+    val created_at: String?,
+    val description: String,
+    val html_url: String?,
+    val id: Int?,
+    val members_count: Int?,
+    val members_url: String?,
+    val name: String,
+    val node_id: String?,
+    val notification_setting: String,
+    val organization: Organization?,
+    val parent: Any,
+    val permission: String,
+    val privacy: String,
+    val repos_count: Int?,
+    val repositories_url: String?,
+    val slug: String?,
+    val updated_at: String?,
+    val url: String?
+)
