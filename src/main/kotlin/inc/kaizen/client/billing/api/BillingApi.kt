@@ -13,23 +13,35 @@ interface BillingApi {
 
     // Organization Billing
     @GET("/orgs/{org}/settings/billing/actions")
-    suspend fun getOrgActionsBilling(@Path("org") org: String): Response<TokenBilling>
+    suspend fun getOrgActionsBilling(
+        @Path("org") org: String
+    ): Response<TokenBilling>
 
     @GET("/orgs/{org}/settings/billing/packages")
-    suspend fun getOrgPackagesBilling(@Path("org") org: String): Response<PackageBilling>
+    suspend fun getOrgPackagesBilling(
+        @Path("org") org: String
+    ): Response<PackageBilling>
 
     @GET("/orgs/{org}/settings/billing/shared-storage")
-    suspend fun getOrgSharedStorageBilling(@Path("org") org: String): Response<StorageBilling>
+    suspend fun getOrgSharedStorageBilling(
+        @Path("org") org: String
+    ): Response<StorageBilling>
 
     // User Billing
     @GET("/users/{username}/settings/billing/actions")
-    suspend fun getUserActionsBilling(@Path("username") username: String): Response<TokenBilling>
+    suspend fun getUserActionsBilling(
+        @Path("username") username: String
+    ): Response<TokenBilling>
 
     @GET("/users/{username}/settings/billing/packages")
-    suspend fun getUserPackagesBilling(@Path("username") username: String): Response<PackageBilling>
+    suspend fun getUserPackagesBilling(
+        @Path("username") username: String
+    ): Response<PackageBilling>
 
     @GET("/users/{username}/settings/billing/shared-storage")
-    suspend fun getUserSharedStorageBilling(@Path("username") username: String): Response<StorageBilling>
+    suspend fun getUserSharedStorageBilling(
+        @Path("username") username: String
+    ): Response<StorageBilling>
 
     @GET("/organizations/{org}/settings/billing/usage")
     suspend fun getOrganizationBillingReport(
