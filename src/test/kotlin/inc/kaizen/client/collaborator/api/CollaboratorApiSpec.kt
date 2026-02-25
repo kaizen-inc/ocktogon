@@ -14,7 +14,7 @@ class CollaboratorApiSpec: FunSpec({
 
     beforeSpec {
         val fileContent = this::class.java.classLoader.getResource("config.json")?.readText().toString()
-        val authors = JsonPath.read(fileContent, "$.store.book[*].author")
+//        val authors = JsonPath.read(fileContent, "$.store.book[*].author")
         context = JsonPath.parse(fileContent)
         api = Ocktogon.createService(CollaboratorApi::class.java)
     }
