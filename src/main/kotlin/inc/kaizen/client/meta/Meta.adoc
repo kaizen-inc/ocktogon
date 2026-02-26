@@ -1,0 +1,38 @@
+= Meta, Rate Limit & Licenses API
+:toc:
+:toclevels: 3
+
+== Overview
+Utility endpoints: GitHub API metadata, rate limiting info, and open-source license information.
+
+== MetaApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/meta` | Get GitHub meta information (IPs, SSH fingerprints, etc.)
+| GET | `/octocat` | Get Octocat ASCII art
+| GET | `/zen` | Get a random sentence from the Zen of GitHub
+| GET | `/versions` | Get all API versions
+| GET | `/` | GitHub API Root
+|===
+*Models:* `GitHubMeta`, `GitHubMetaDomains`
+
+== RateLimitApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/rate_limit` | Get rate limit status for the authenticated user
+|===
+*Models:* `RateLimitOverview`, `RateLimitResources`, `RateLimit`
+
+== LicenseApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/licenses` | Get all commonly used licenses
+| GET | `/licenses/{license}` | Get a license
+| GET | `/repos/{owner}/{repo}/license` | Get the license for a repository
+|===
+*Models:* `LicenseSimple`, `RepoLicenseContent`
+*Shared Models:* `common.License`
+

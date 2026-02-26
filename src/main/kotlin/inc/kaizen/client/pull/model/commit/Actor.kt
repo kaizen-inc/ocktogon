@@ -1,7 +1,4 @@
 package inc.kaizen.client.pull.model.commit
 
-data class Actor(
-    val date: String,
-    val email: String,
-    val name: String
-)
+// Actor moved to inc.kaizen.client.common.Actor
+typealias Actor = inc.kaizen.client.common.Actor

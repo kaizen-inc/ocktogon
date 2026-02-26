@@ -1,0 +1,36 @@
+= Gists API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub Gists and their comments.
+
+== GistApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/gists` | List gists for the authenticated user
+| POST | `/gists` | Create a gist
+| GET | `/gists/public` | List public gists
+| GET | `/gists/starred` | List starred gists
+| GET | `/gists/{gist_id}` | Get a gist
+| PATCH | `/gists/{gist_id}` | Update a gist
+| DELETE | `/gists/{gist_id}` | Delete a gist
+| GET | `/gists/{gist_id}/commits` | List gist commits
+| GET | `/gists/{gist_id}/forks` | List gist forks
+| POST | `/gists/{gist_id}/forks` | Fork a gist
+| GET | `/gists/{gist_id}/star` | Check if a gist is starred
+| PUT | `/gists/{gist_id}/star` | Star a gist
+| DELETE | `/gists/{gist_id}/star` | Unstar a gist
+| GET | `/gists/{gist_id}/{sha}` | Get a gist revision
+| GET | `/users/{username}/gists` | List gists for a user
+| GET | `/gists/{gist_id}/comments` | List gist comments
+| POST | `/gists/{gist_id}/comments` | Create a gist comment
+| GET | `/gists/{gist_id}/comments/{comment_id}` | Get a gist comment
+| PATCH | `/gists/{gist_id}/comments/{comment_id}` | Update a gist comment
+| DELETE | `/gists/{gist_id}/comments/{comment_id}` | Delete a gist comment
+|===
+
+*Models:* `Gist`, `GistFile`, `GistFork`, `GistCommit`, `GistComment`, `GistChangeStatus`
+*Request Models:* `CreateGistRequest`, `UpdateGistRequest`, `GistFileRequest`, `CreateGistCommentRequest`
+

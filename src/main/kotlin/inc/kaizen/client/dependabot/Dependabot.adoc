@@ -1,0 +1,28 @@
+= Dependabot API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for Dependabot alerts and secrets at the organization and repository level.
+
+== DependabotApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/orgs/{org}/dependabot/alerts` | List Dependabot alerts for an organization
+| GET | `/repos/{owner}/{repo}/dependabot/alerts` | List Dependabot alerts for a repository
+| GET | `/repos/{owner}/{repo}/dependabot/alerts/{alert_number}` | Get a Dependabot alert
+| PATCH | `/repos/{owner}/{repo}/dependabot/alerts/{alert_number}` | Update a Dependabot alert
+| GET | `/orgs/{org}/dependabot/secrets` | List organization secrets
+| GET | `/orgs/{org}/dependabot/secrets/public-key` | Get an organization public key
+| GET/PUT/DELETE | `/orgs/{org}/dependabot/secrets/{secret_name}` | Manage org secret
+| GET | `/orgs/{org}/dependabot/secrets/{secret_name}/repositories` | List selected repos for org secret
+| PUT | `/orgs/{org}/dependabot/secrets/{secret_name}/repositories` | Set selected repos for org secret
+| PUT/DELETE | `/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}` | Add/Remove repo from org secret
+| GET | `/repos/{owner}/{repo}/dependabot/secrets` | List repo secrets
+| GET | `/repos/{owner}/{repo}/dependabot/secrets/public-key` | Get repo public key
+| GET/PUT/DELETE | `/repos/{owner}/{repo}/dependabot/secrets/{secret_name}` | Manage repo secret
+|===
+
+*Models:* `DependabotAlert`, `DependabotSecret`, `DependabotPublicKey`, `DependabotSecretsResponse`, `UpdateDependabotAlertRequest`, `CreateDependabotSecretRequest`
+

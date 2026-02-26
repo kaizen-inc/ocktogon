@@ -1,11 +1,12 @@
 package inc.kaizen.client.pull.model.pull
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.common.Repository
+import inc.kaizen.client.common.User
 
 data class Head(
-    val label: String,
-    val ref: String,
-    val repo: Repo,
-    val sha: String,
-    val user: User
+    val label: String? = null,
+    val ref: String? = null,
+    val repo: Repository? = null,
+    val sha: String? = null,
+    val user: User? = null
 )

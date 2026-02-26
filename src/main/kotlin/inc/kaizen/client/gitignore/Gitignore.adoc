@@ -1,0 +1,17 @@
+= Gitignore API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for listing and fetching gitignore templates.
+
+== GitignoreApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/gitignore/templates` | Get all gitignore templates
+| GET | `/gitignore/templates/{name}` | Get a gitignore template
+|===
+
+*Models:* `GitignoreTemplate`
+

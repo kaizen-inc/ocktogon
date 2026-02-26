@@ -1,10 +1,6 @@
 package inc.kaizen.client.pull.model.pull
 
-data class License(
-    val html_url: String?,
-    val key: String,
-    val name: String,
-    val node_id: String,
-    val spdx_id: String,
-    val url: String
-)
+import inc.kaizen.client.common.License
+
+// License moved to inc.kaizen.client.common.License
+typealias License = License

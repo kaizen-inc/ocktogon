@@ -1,16 +1,16 @@
 package inc.kaizen.client.issue.model.comment
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.common.User
 
 data class Comment(
-    val author_association: String,
-    val body: String,
-    val created_at: String,
-    val html_url: String,
-    val id: Int,
-    val issue_url: String,
-    val node_id: String,
-    val updated_at: String,
-    val url: String,
-    val user: User
+    val author_association: String? = null,
+    val body: String? = null,
+    val created_at: String? = null,
+    val html_url: String? = null,
+    val id: Int? = null,
+    val issue_url: String? = null,
+    val node_id: String? = null,
+    val updated_at: String? = null,
+    val url: String? = null,
+    val user: User? = null
 )

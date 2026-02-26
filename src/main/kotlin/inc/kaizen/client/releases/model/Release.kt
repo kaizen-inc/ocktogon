@@ -1,24 +1,24 @@
 package inc.kaizen.client.releases.model
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.common.User
 
 data class Release(
-    val releaseAssets: List<ReleaseAsset>,
-    val assets_url: String,
-    val author: User,
-    val body: String,
-    val created_at: String,
-    val draft: Boolean,
-    val html_url: String,
-    val id: Int,
-    val name: String,
-    val node_id: String,
-    val prerelease: Boolean,
-    val published_at: String,
-    val tag_name: String,
-    val tarball_url: String,
-    val target_commitish: String,
-    val upload_url: String,
-    val url: String,
-    val zipball_url: String
+    val assets: List<ReleaseAsset>? = null,
+    val assets_url: String? = null,
+    val author: User? = null,
+    val body: String? = null,
+    val created_at: String? = null,
+    val draft: Boolean? = null,
+    val html_url: String? = null,
+    val id: Int? = null,
+    val name: String? = null,
+    val node_id: String? = null,
+    val prerelease: Boolean? = null,
+    val published_at: String? = null,
+    val tag_name: String? = null,
+    val tarball_url: String? = null,
+    val target_commitish: String? = null,
+    val upload_url: String? = null,
+    val url: String? = null,
+    val zipball_url: String? = null
 )

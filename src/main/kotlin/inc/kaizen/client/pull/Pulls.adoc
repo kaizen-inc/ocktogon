@@ -1,3 +1,46 @@
+= Pull Requests API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub pull requests, reviews, review comments, commits, and requested reviewers.
+
+== PullApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/pulls` | List pull requests
+| POST | `/repos/{owner}/{repo}/pulls` | Create a pull request
+| GET | `/repos/{owner}/{repo}/pulls/{pull_number}` | Get a pull request
+| PATCH | `/repos/{owner}/{repo}/pulls/{pull_number}` | Update a pull request
+| GET | `/repos/{owner}/{repo}/pulls/{pull_number}/commits` | List commits on PR
+| GET | `/repos/{owner}/{repo}/pulls/{pull_number}/files` | List pull request files
+| GET | `/repos/{owner}/{repo}/pulls/{pull_number}/merge` | Check if PR is merged
+| GET | `/repos/{owner}/{repo}/pulls/comments` | List review comments in repo
+| GET/PATCH/DELETE | `/repos/{owner}/{repo}/pulls/comments/{comment_id}` | Manage review comment
+| GET | `/repos/{owner}/{repo}/pulls/{pull_number}/comments` | List review comments on PR
+| POST | `/repos/{owner}/{repo}/pulls/{pull_number}/comments` | Create a review comment
+| POST | `…/comments/{comment_id}/replies` | Reply to review comment
+|===
+*Models:* `Pull`, `Head`, `ReviewComment`
+
+== PullReviewApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/pulls/{pull_number}/reviews` | List reviews
+| POST | `/repos/{owner}/{repo}/pulls/{pull_number}/reviews` | Create a review
+| GET/PUT/DELETE | `/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}` | Get/Update/Delete review
+| GET | `…/{review_id}/comments` | List review comments
+| POST | `…/{review_id}/dismissals` | Dismiss a review
+| POST | `…/{review_id}/events` | Submit a review
+| POST | `/repos/{owner}/{repo}/pulls/{pull_number}/merge` | Merge a pull request
+| GET | `/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers` | Get requested reviewers
+| POST | `/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers` | Request reviewers
+| DELETE | `/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers` | Remove requested reviewers
+|===
+*Models:* `PullReview`, `CreateReviewRequest`, `MergePullRequestRequest`, `MergeResult`, `RequestReviewersRequest`
+
 == Custom media types for pull requests
 
 These are the supported media types for pull requests.
@@ -11,4 +54,3 @@ application/vnd.github.full+json
 application/vnd.github.diff
 application/vnd.github.patch
 ----
-

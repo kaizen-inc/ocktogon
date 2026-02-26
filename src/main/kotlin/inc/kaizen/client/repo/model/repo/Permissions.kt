@@ -1,7 +1,4 @@
 package inc.kaizen.client.repo.model.repo
 
-data class Permissions(
-    val admin: Boolean,
-    val pull: Boolean,
-    val push: Boolean
-)
+// Permissions moved to inc.kaizen.client.common.RepositoryPermissions
+typealias Permissions = inc.kaizen.client.common.RepositoryPermissions

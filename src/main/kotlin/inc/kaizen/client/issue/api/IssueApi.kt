@@ -1,16 +1,12 @@
 package inc.kaizen.client.issue.api
 
-import inc.kaizen.client.issue.model.Filter
-import inc.kaizen.client.issue.model.SortComment
-import inc.kaizen.client.issue.model.SortIssue
+import inc.kaizen.client.issue.model.*
 import inc.kaizen.client.issue.model.comment.Comment
 import inc.kaizen.client.issue.model.event.Event
 import inc.kaizen.client.issue.model.issue.Issue
 import inc.kaizen.client.pull.model.Direction
 import inc.kaizen.client.pull.model.State
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface IssueApi {
 
@@ -130,4 +126,50 @@ interface IssueApi {
         @Query("per_page") perPage: Int = 30,
         @Query("page") page : Int = 1
     ): List<Event>
+
+    @POST("/repos/{owner}/{repo}/issues")
+    fun createIssue(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @retrofit2.http.Body body: CreateIssueRequest
+    ): Issue
+
+    @PATCH("/repos/{owner}/{repo}/issues/{issue_number}")
+    fun updateIssue(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("issue_number") issueNumber: Int,
+        @retrofit2.http.Body body: UpdateIssueRequest
+    ): Issue
+
+    @PUT("/repos/{owner}/{repo}/issues/{issue_number}/lock")
+    fun lockIssue(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("issue_number") issueNumber: Int,
+        @retrofit2.http.Body body: LockIssueRequest? = null
+    ): retrofit2.Response<Unit>
+
+    @DELETE("/repos/{owner}/{repo}/issues/{issue_number}/lock")
+    fun unlockIssue(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("issue_number") issueNumber: Int
+    ): retrofit2.Response<Unit>
+
+    @PATCH("/repos/{owner}/{repo}/issues/comments/{comment_id}")
+    fun updateIssueComment(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("comment_id") commentId: Int,
+        @retrofit2.http.Body body: UpdateCommentRequest
+    ): inc.kaizen.client.issue.model.comment.Comment
+
+    @DELETE("/repos/{owner}/{repo}/issues/comments/{comment_id}")
+    fun deleteIssueComment(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("comment_id") commentId: Int
+    ): retrofit2.Response<Unit>
 }
+

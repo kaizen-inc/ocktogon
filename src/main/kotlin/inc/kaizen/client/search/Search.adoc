@@ -1,0 +1,31 @@
+= Search API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for searching GitHub code, commits, issues, labels, repositories, topics, and users.
+
+== SearchApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/search/code` | Search code
+| GET | `/search/commits` | Search commits
+| GET | `/search/issues` | Search issues and pull requests
+| GET | `/search/labels` | Search labels
+| GET | `/search/repositories` | Search repositories
+| GET | `/search/topics` | Search topics
+| GET | `/search/users` | Search users
+|===
+
+*Models:*
+- `CodeSearchResult` / `CodeSearchItem`
+- `CommitSearchResult` / `CommitSearchItem`
+- `IssueSearchResult` / `IssueSearchItem`
+- `LabelSearchResult` / `LabelSearchItem`
+- `RepoSearchResult` (items are `common.Repository`)
+- `TopicSearchResult` / `TopicSearchItem`
+- `UserSearchResult` (items are `common.User`)
+
+*Shared Models:* `common.Repository`, `common.User`, `common.Label`, `common.Milestone`, `common.Actor`, `common.SimpleCommit`
+

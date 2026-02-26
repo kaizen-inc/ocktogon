@@ -1,0 +1,34 @@
+= Releases API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub releases and release assets.
+
+== ReleaseApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/releases` | List releases
+| POST | `/repos/{owner}/{repo}/releases` | Create a release
+| POST | `/repos/{owner}/{repo}/releases/generate-notes` | Generate release notes content for a release
+| GET | `/repos/{owner}/{repo}/releases/latest` | Get the latest release
+| GET | `/repos/{owner}/{repo}/releases/tags/{tag}` | Get a release by tag name
+| GET | `/repos/{owner}/{repo}/releases/{release_id}` | Get a release
+| PATCH | `/repos/{owner}/{repo}/releases/{release_id}` | Update a release
+| DELETE | `/repos/{owner}/{repo}/releases/{release_id}` | Delete a release
+|===
+*Models:* `Release`, `ReleaseRequest`, `ReleaseNotes`, `ReleaseNotesRequest`
+
+== ReleaseAssetApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/releases/{release_id}/assets` | List release assets
+| POST | `/repos/{owner}/{repo}/releases/{release_id}/assets` | Upload a release asset
+| GET | `/repos/{owner}/{repo}/releases/assets/{asset_id}` | Get a release asset
+| PATCH | `/repos/{owner}/{repo}/releases/assets/{asset_id}` | Update a release asset
+| DELETE | `/repos/{owner}/{repo}/releases/assets/{asset_id}` | Delete a release asset
+|===
+*Models:* `ReleaseAsset`
+

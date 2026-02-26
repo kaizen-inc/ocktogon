@@ -1,0 +1,74 @@
+= Issues API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub issues, comments, events, labels, milestones, assignees, and timelines.
+
+== IssueApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/issues` | List issues assigned to authenticated user
+| GET | `/orgs/{org}/issues` | List org issues
+| GET | `/repos/{owner}/{repo}/issues` | List repo issues
+| GET | `/repos/{owner}/{repo}/issues/{issue_number}` | Get an issue
+| POST | `/repos/{owner}/{repo}/issues` | Create an issue
+| PATCH | `/repos/{owner}/{repo}/issues/{issue_number}` | Update an issue
+| PUT | `/repos/{owner}/{repo}/issues/{issue_number}/lock` | Lock an issue
+| DELETE | `/repos/{owner}/{repo}/issues/{issue_number}/lock` | Unlock an issue
+| GET | `/user/issues` | List issues for authenticated user
+| GET | `/repos/{owner}/{repo}/issues/comments` | List issue comments for repo
+| GET | `/repos/{owner}/{repo}/issues/comments/{comment_id}` | Get an issue comment
+| POST | `/repos/{owner}/{repo}/issues/{issue_number}/comments` | Create an issue comment
+| PATCH | `/repos/{owner}/{repo}/issues/comments/{comment_id}` | Update an issue comment
+| DELETE | `/repos/{owner}/{repo}/issues/comments/{comment_id}` | Delete an issue comment
+| GET | `/repos/{owner}/{repo}/issues/{issue_number}/comments` | List issue comments
+| GET | `/repos/{owner}/{repo}/issues/events` | List issue events for repo
+| GET | `/repos/{owner}/{repo}/issues/events/{event_id}` | Get an issue event
+| GET | `/repos/{owner}/{repo}/issues/{issue_number}/events` | List issue events
+|===
+*Models:* `Issue`, `Comment`, `Event`
+
+== IssueLabelApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/labels` | List labels for repo
+| POST | `/repos/{owner}/{repo}/labels` | Create a label
+| GET | `/repos/{owner}/{repo}/labels/{name}` | Get a label
+| PATCH | `/repos/{owner}/{repo}/labels/{name}` | Update a label
+| DELETE | `/repos/{owner}/{repo}/labels/{name}` | Delete a label
+| GET/POST/PUT/DELETE/DELETE | `/repos/{owner}/{repo}/issues/{issue_number}/labels` | Manage issue labels
+| GET | `/repos/{owner}/{repo}/milestones/{milestone_number}/labels` | List labels for milestone
+|===
+*Models:* `common.Label`, `LabelRequest`, `AddLabelsRequest`
+
+== IssueMilestoneApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/milestones` | List milestones
+| POST | `/repos/{owner}/{repo}/milestones` | Create a milestone
+| GET/PATCH/DELETE | `/repos/{owner}/{repo}/milestones/{milestone_number}` | Get/Update/Delete milestone
+|===
+*Models:* `common.Milestone`, `MilestoneRequest`
+
+== IssueAssigneeApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/assignees` | List assignees
+| GET | `/repos/{owner}/{repo}/assignees/{assignee}` | Check if user can be assigned
+| POST | `/repos/{owner}/{repo}/issues/{issue_number}/assignees` | Add assignees
+| DELETE | `/repos/{owner}/{repo}/issues/{issue_number}/assignees` | Remove assignees
+| GET | `/repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}` | Check assignee
+|===
+
+== IssueTimelineApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/issues/{issue_number}/timeline` | List timeline events for an issue
+|===
+

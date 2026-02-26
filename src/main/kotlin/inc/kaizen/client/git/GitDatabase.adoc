@@ -1,0 +1,30 @@
+= Git Database API
+:toc:
+:toclevels: 3
+
+== Overview
+Low-level endpoints for interacting with Git objects: blobs, commits, references, tags, and trees.
+
+== GitDataApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/git/blobs/{file_sha}` | Get a blob
+| POST | `/repos/{owner}/{repo}/git/blobs` | Create a blob
+| GET | `/repos/{owner}/{repo}/git/commits/{commit_sha}` | Get a commit
+| POST | `/repos/{owner}/{repo}/git/commits` | Create a commit
+| GET | `/repos/{owner}/{repo}/git/ref/{ref}` | Get a reference
+| GET | `/repos/{owner}/{repo}/git/matching-refs/{ref}` | List matching references
+| POST | `/repos/{owner}/{repo}/git/refs` | Create a reference
+| PATCH | `/repos/{owner}/{repo}/git/refs/{ref}` | Update a reference
+| DELETE | `/repos/{owner}/{repo}/git/refs/{ref}` | Delete a reference
+| GET | `/repos/{owner}/{repo}/git/tags/{tag_sha}` | Get a tag
+| POST | `/repos/{owner}/{repo}/git/tags` | Create a tag
+| GET | `/repos/{owner}/{repo}/git/trees/{tree_sha}` | Get a tree
+| POST | `/repos/{owner}/{repo}/git/trees` | Create a tree
+|===
+
+*Models:* `GitBlob`, `GitBlobRef`, `GitCommit`, `GitRef`, `GitRefObject`, `GitTag`, `GitTree`, `GitTreeItem`
+*Request Models:* `CreateBlobRequest`, `CreateGitCommitRequest`, `CreateRefRequest`, `UpdateRefRequest`, `CreateTagRequest`, `CreateTreeRequest`
+*Shared Models:* `common.Actor`, `common.Verification`, `common.SimpleCommit`
+

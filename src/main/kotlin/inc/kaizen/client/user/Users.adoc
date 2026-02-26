@@ -1,0 +1,43 @@
+= Users API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub users, followers, emails, SSH keys, GPG keys, social accounts, and SSH signing keys.
+
+== UserApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/user` | Get the authenticated user
+| PATCH | `/user` | Update the authenticated user
+| GET | `/users` | List users
+| GET | `/users/{username}` | Get a user
+| GET | `/users/{username}/hovercard` | Get contextual information
+| GET | `/user/blocks` | List blocked users
+| GET/PUT/DELETE | `/user/blocks/{username}` | Check/Block/Unblock user
+| GET | `/user/followers` | List followers of authenticated user
+| GET | `/users/{username}/followers` | List followers of user
+| GET | `/user/following` | List people authenticated user follows
+| GET | `/users/{username}/following` | List people user follows
+| GET/PUT/DELETE | `/user/following/{username}` | Check/Follow/Unfollow user
+| GET | `/users/{username}/following/{target_user}` | Check if user follows another
+| GET/POST/DELETE | `/user/emails` | List/Add/Delete emails
+| GET | `/user/public_emails` | List public emails
+| GET/POST | `/user/keys` | List/Create SSH keys
+| GET/DELETE | `/user/keys/{key_id}` | Get/Delete SSH key
+| GET | `/users/{username}/keys` | List SSH keys for user
+| GET/POST | `/user/gpg_keys` | List/Create GPG keys
+| GET/DELETE | `/user/gpg_keys/{gpg_key_id}` | Get/Delete GPG key
+| GET | `/users/{username}/gpg_keys` | List GPG keys for user
+| GET/POST/DELETE | `/user/social_accounts` | List/Add/Delete social accounts
+| GET | `/users/{username}/social_accounts` | List social accounts for user
+| GET/POST | `/user/ssh_signing_keys` | List/Create SSH signing keys
+| GET/DELETE | `/user/ssh_signing_keys/{ssh_signing_key_id}` | Get/Delete SSH signing key
+| GET | `/users/{username}/ssh_signing_keys` | List SSH signing keys for user
+|===
+
+*Models:* `UpdateUserRequest`, `UserEmail`, `AddEmailRequest`, `DeleteEmailRequest`, `SshKey`, `CreateSshKeyRequest`, `GpgKey`, `CreateGpgKeyRequest`, `SocialAccount`, `AddSocialAccountRequest`, `DeleteSocialAccountRequest`, `SshSigningKey`
+
+*Shared Models (from `common`):* `User`, `Plan`
+

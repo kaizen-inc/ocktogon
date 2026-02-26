@@ -1,15 +1,15 @@
 package inc.kaizen.client.pull.model.commit
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.common.User
 
 data class PullCommit(
-    val author: User,
-    val comments_url: String,
-    val commit: Commit,
-    val committer: User,
-    val html_url: String,
-    val node_id: String,
-    val parents: List<Tree>,
-    val sha: String,
-    val url: String
+    val author: User? = null,
+    val comments_url: String? = null,
+    val commit: Commit? = null,
+    val committer: User? = null,
+    val html_url: String? = null,
+    val node_id: String? = null,
+    val parents: List<Tree>? = null,
+    val sha: String? = null,
+    val url: String? = null
 )

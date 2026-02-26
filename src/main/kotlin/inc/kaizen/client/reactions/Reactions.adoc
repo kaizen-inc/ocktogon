@@ -1,0 +1,39 @@
+= Reactions API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for adding, listing, and deleting reactions on commit comments, issues, issue comments, pull request review comments, releases, and team discussions.
+
+== ReactionApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/comments/{comment_id}/reactions` | List reactions for a commit comment
+| POST | `/repos/{owner}/{repo}/comments/{comment_id}/reactions` | Create reaction for a commit comment
+| DELETE | `/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}` | Delete a commit comment reaction
+| GET | `/repos/{owner}/{repo}/issues/{issue_number}/reactions` | List reactions for an issue
+| POST | `/repos/{owner}/{repo}/issues/{issue_number}/reactions` | Create reaction for an issue
+| DELETE | `/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}` | Delete an issue reaction
+| GET | `/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions` | List reactions for an issue comment
+| POST | `/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions` | Create reaction for an issue comment
+| DELETE | `/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}` | Delete an issue comment reaction
+| GET | `/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions` | List reactions for a PR review comment
+| POST | `/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions` | Create reaction for a PR review comment
+| DELETE | `/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}` | Delete a PR review comment reaction
+| GET | `/repos/{owner}/{repo}/releases/{release_id}/reactions` | List reactions for a release
+| POST | `/repos/{owner}/{repo}/releases/{release_id}/reactions` | Create reaction for a release
+| DELETE | `/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}` | Delete a release reaction
+| GET | `/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions` | List reactions for team discussion
+| POST | `/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions` | Create reaction for team discussion
+| DELETE | `…/reactions/{reaction_id}` | Delete team discussion reaction
+| GET | `…/discussions/{discussion_number}/comments/{comment_number}/reactions` | List reactions for team discussion comment
+| POST | `…/comments/{comment_number}/reactions` | Create reaction for team discussion comment
+| DELETE | `…/comments/{comment_number}/reactions/{reaction_id}` | Delete team discussion comment reaction
+|===
+
+*Supported content values:* `+1`, `-1`, `laugh`, `confused`, `heart`, `hooray`, `rocket`, `eyes`
+
+*Models:* `Reaction`, `CreateReactionRequest`
+*Shared Models:* `common.User`
+

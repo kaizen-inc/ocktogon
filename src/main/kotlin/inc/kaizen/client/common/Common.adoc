@@ -1,0 +1,72 @@
+= Common Package
+:toc:
+:toclevels: 3
+
+== Overview
+
+The `common` package contains shared model classes used across all other packages. These models prevent duplication and ensure consistency across the client.
+
+== Models
+
+=== User
+Represents a GitHub user or bot account.
+
+[source,kotlin]
+----
+data class User(
+    val id: Int?,
+    val login: String?,
+    val node_id: String?,
+    val avatar_url: String?,
+    val html_url: String?,
+    val type: String?,
+    val site_admin: Boolean?,
+    ...
+)
+----
+
+=== Repository
+Represents a GitHub repository with all metadata.
+
+=== License
+Represents an open-source license.
+
+=== Label
+Represents an issue/PR label.
+
+=== Milestone
+Represents a milestone for issues/PRs.
+
+=== Team
+Represents a GitHub team within an organization.
+
+=== Organization
+Represents a GitHub organization.
+
+=== HRef
+Simple href wrapper: `data class HRef(val href: String?)`
+
+=== PullRequestLinks
+Links object used in Pull Requests (`_links` field).
+
+=== ReviewCommentLinks
+Links object used in review comments.
+
+=== Actor
+Git commit author/committer: `name`, `email`, `date`.
+
+=== Verification
+Git commit verification status.
+
+=== SimpleCommit
+Minimal commit reference: `sha`, `url`.
+
+=== Hook / HookConfig / HookLastResponse
+Webhook models shared across org and repo webhooks.
+
+=== HookDelivery / HookDeliveryRequest / HookDeliveryResponse
+Webhook delivery tracking models.
+
+=== CreateHookRequest / UpdateHookRequest
+Request models for creating/updating webhooks.
+

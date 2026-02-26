@@ -1,0 +1,66 @@
+= Activity API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for GitHub notifications, starring, watching, and events.
+
+== NotificationApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/notifications` | List notifications for authenticated user
+| PUT | `/notifications` | Mark notifications as read
+| GET | `/repos/{owner}/{repo}/notifications` | List repo notifications
+| PUT | `/repos/{owner}/{repo}/notifications` | Mark repo notifications as read
+| GET | `/notifications/threads/{thread_id}` | Get a thread
+| PATCH | `/notifications/threads/{thread_id}` | Mark a thread as read
+| DELETE | `/notifications/threads/{thread_id}` | Mark a thread as done
+| GET | `/notifications/threads/{thread_id}/subscription` | Get thread subscription
+| PUT | `/notifications/threads/{thread_id}/subscription` | Set thread subscription
+| DELETE | `/notifications/threads/{thread_id}/subscription` | Delete thread subscription
+|===
+*Models:* `Notification`, `NotificationSubject`, `ThreadSubscription`, `MarkNotificationsRequest`
+
+== StarApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/stargazers` | List stargazers
+| GET | `/user/starred` | List repos starred by authenticated user
+| GET | `/users/{username}/starred` | List repos starred by user
+| GET | `/user/starred/{owner}/{repo}` | Check if repo is starred
+| PUT | `/user/starred/{owner}/{repo}` | Star a repo
+| DELETE | `/user/starred/{owner}/{repo}` | Unstar a repo
+|===
+*Models:* `common.User`, `common.Repository`
+
+== WatchApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/subscribers` | List watchers
+| GET | `/repos/{owner}/{repo}/subscription` | Get repo subscription
+| PUT | `/repos/{owner}/{repo}/subscription` | Set repo subscription
+| DELETE | `/repos/{owner}/{repo}/subscription` | Delete repo subscription
+| GET | `/user/subscriptions` | List repos watched by authenticated user
+| GET | `/users/{username}/subscriptions` | List repos watched by user
+|===
+*Models:* `RepoSubscription`, `SetRepoSubscriptionRequest`
+
+== EventApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/events` | List public events
+| GET | `/repos/{owner}/{repo}/events` | List repo events
+| GET | `/orgs/{org}/events` | List public org events
+| GET | `/users/{username}/events` | List events for authenticated user
+| GET | `/users/{username}/events/orgs/{org}` | List org events for authenticated user
+| GET | `/users/{username}/events/public` | List public events for user
+| GET | `/networks/{owner}/{repo}/events` | List public events for repo network
+| GET | `/users/{username}/received_events` | List received events for user
+| GET | `/users/{username}/received_events/public` | List public received events for user
+|===
+*Models:* `Event`, `EventActor`, `EventRepo`
+

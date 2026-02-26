@@ -1,0 +1,18 @@
+= Rate Limit API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for checking the current rate limit status.
+
+== RateLimitApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/rate_limit` | Get rate limit status for the authenticated user
+|===
+
+*Models:* `RateLimitOverview`, `RateLimitResources`, `RateLimit`
+
+NOTE: Accessing this endpoint does not count against your rate limit.
+

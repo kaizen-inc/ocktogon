@@ -4,10 +4,10 @@ import inc.kaizen.client.billing.model.BillingReport
 import inc.kaizen.client.billing.model.PackageBilling
 import inc.kaizen.client.billing.model.StorageBilling
 import inc.kaizen.client.billing.model.TokenBilling
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-import retrofit2.Response
 
 interface BillingApi {
 

@@ -1,16 +1,16 @@
 package inc.kaizen.client.issue.model.event
 
+import inc.kaizen.client.common.User
 import inc.kaizen.client.issue.model.issue.Issue
-import inc.kaizen.client.user.model.User
 
 data class Event(
-    val actor: User,
-    val commit_id: String,
-    val commit_url: String,
-    val created_at: String,
-    val event: String,
-    val id: Int,
-    val issue: Issue,
-    val node_id: String,
-    val url: String
+    val actor: User? = null,
+    val commit_id: String? = null,
+    val commit_url: String? = null,
+    val created_at: String? = null,
+    val event: String? = null,
+    val id: Int? = null,
+    val issue: Issue? = null,
+    val node_id: String? = null,
+    val url: String? = null
 )

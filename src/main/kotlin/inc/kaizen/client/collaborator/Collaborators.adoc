@@ -1,0 +1,22 @@
+= Collaborators API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing repository collaborators and their permissions.
+
+== CollaboratorApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/collaborators` | List repository collaborators
+| GET | `/repos/{owner}/{repo}/collaborators/{username}` | Check if a user is a collaborator
+| PUT | `/repos/{owner}/{repo}/collaborators/{username}` | Add a repository collaborator
+| DELETE | `/repos/{owner}/{repo}/collaborators/{username}` | Remove a repository collaborator
+| GET | `/repos/{owner}/{repo}/collaborators/{username}/permission` | Get collaborator permission level
+|===
+
+*Models:* `Collaborator`, `CollaboratorPermission`, `AddCollaboratorRequest`
+
+*Shared Models:* `common.User`
+
