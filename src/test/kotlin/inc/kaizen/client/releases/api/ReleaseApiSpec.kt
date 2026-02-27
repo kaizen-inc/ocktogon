@@ -1,12 +1,15 @@
 package inc.kaizen.client.releases.api
 
+import inc.kaizen.client.releases.model.Release
+import inc.kaizen.client.releases.model.ReleaseNotes
+import inc.kaizen.client.releases.model.ReleaseNotesRequest
+import inc.kaizen.client.releases.model.ReleaseRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
 import retrofit2.Response
-import inc.kaizen.client.releases.model.*
 
 class ReleaseApiSpec : FunSpec({
     val api = mockk<ReleaseApi>()

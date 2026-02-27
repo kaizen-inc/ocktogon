@@ -1,12 +1,12 @@
 package inc.kaizen.client.page.api
 
+import inc.kaizen.client.page.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
 import retrofit2.Response
-import inc.kaizen.client.page.model.*
 
 class GitHubPagesApiSpec : FunSpec({
     val api = mockk<GitHubPagesApi>()

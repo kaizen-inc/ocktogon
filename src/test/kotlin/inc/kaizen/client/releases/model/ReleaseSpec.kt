@@ -1,8 +1,8 @@
 package inc.kaizen.client.releases.model
 
+import inc.kaizen.client.user.model.User
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import inc.kaizen.client.user.model.User
 
 class ReleaseSpec : StringSpec({
     "Release should instantiate and compare correctly" {
@@ -63,7 +63,7 @@ class ReleaseSpec : StringSpec({
             url = "url"
         )
         val release = Release(
-            releaseAssets = listOf(asset),
+            assets = listOf(asset),
             assets_url = "assets_url",
             author = user,
             body = "body",
@@ -85,6 +85,6 @@ class ReleaseSpec : StringSpec({
         release.name shouldBe "ReleaseName"
         release.id shouldBe 1
         release.author shouldBe user
-        release.releaseAssets.size shouldBe 1
+        release.assets!!.size shouldBe 1
     }
 })

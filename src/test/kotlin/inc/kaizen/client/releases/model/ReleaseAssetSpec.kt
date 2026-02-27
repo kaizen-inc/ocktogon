@@ -1,8 +1,8 @@
 package inc.kaizen.client.releases.model
 
+import inc.kaizen.client.user.model.User
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import inc.kaizen.client.user.model.User
 
 class ReleaseAssetSpec : StringSpec({
     "ReleaseAsset should instantiate and compare correctly" {

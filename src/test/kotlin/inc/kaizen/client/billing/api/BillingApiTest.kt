@@ -1,12 +1,12 @@
 package inc.kaizen.client.billing.api
 
+import inc.kaizen.client.billing.model.*
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
 import retrofit2.Response
-import inc.kaizen.client.billing.model.*
 
 class BillingApiTest : StringSpec({
     "BillingApi interface methods should return expected mocked responses" {

@@ -36,7 +36,7 @@ interface BranchApi {
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Body body: MergeBranchRequest
-    ): inc.kaizen.client.repo.api.RepoCommit
+    ): RepoCommit
 
     @POST("/repos/{owner}/{repo}/merge-upstream")
     suspend fun mergeUpstream(
