@@ -10,10 +10,6 @@ repositories {
     mavenCentral()
     maven {
         url = "https://maven.pkg.github.com/kaizen-inc/Podium"
-        credentials {
-            username = project.hasProperty("GITHUB_ACTOR")? project.GITHUB_ACTOR: System.getenv("GITHUB_ACTOR")
-            password = project.hasProperty("GITHUB_TOKEN")? project.GITHUB_TOKEN: System.getenv("GITHUB_TOKEN")
-        }
     }
 }
 
@@ -26,7 +22,7 @@ dependencies {
     implementation libs.retrofit.converter.scalars
     implementation libs.coroutines.core
 
-    implementation 'inc.kaizen.infra:podium:1.0'
+    implementation libs.podium
 
     testImplementation libs.kotest.runner.junit5
     testImplementation libs.kotest.assertions.core
@@ -38,7 +34,7 @@ dependencies {
 
     testImplementation libs.okhttp.mockwebserver
     testImplementation libs.coroutines.test
-    testImplementation 'com.jayway.jsonpath:json-path:2.8.0'
+    testImplementation libs.jsonpath
 }
 
 test {
@@ -54,10 +50,6 @@ publishing {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/kaizen-inc/ocktogon")
-            credentials {
-                username = project.hasProperty("GITHUB_ACTOR")? project.GITHUB_ACTOR: System.getenv("GITHUB_ACTOR")
-                password = project.hasProperty("GITHUB_TOKEN")? project.GITHUB_TOKEN: System.getenv("GITHUB_TOKEN")
-            }
         }
     }
     publications {
