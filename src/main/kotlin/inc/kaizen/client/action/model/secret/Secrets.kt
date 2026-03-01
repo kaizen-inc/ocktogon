@@ -1,6 +1,0 @@
-package inc.kaizen.client.action.model.secret
-
-data class Secrets(
-    val secrets: List<Secret>,
-    val total_count: Int
-)
