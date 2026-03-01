@@ -19,8 +19,8 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
         env:
-          GITHUB_ACTOR: ${{ secrets.ACTOR }}
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v4
         with:
           name: Artifacts
