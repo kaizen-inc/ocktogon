@@ -1,11 +1,11 @@
 package inc.kaizen.client.ocktogon.pull.api
 
-import inc.kaizen.client.pull.model.*
-import inc.kaizen.client.pull.model.commit.PullCommit
-import inc.kaizen.client.pull.model.file.PullFile
-import inc.kaizen.client.pull.model.pull.Pull
-import inc.kaizen.client.pull.model.review.ReviewComment
-import inc.kaizen.client.pull.model.reviewer.RequestedReviewer
+import inc.kaizen.client.ocktogon.pull.model.*
+import inc.kaizen.client.ocktogon.pull.model.commit.PullCommit
+import inc.kaizen.client.ocktogon.pull.model.file.PullFile
+import inc.kaizen.client.ocktogon.pull.model.pull.Pull
+import inc.kaizen.client.ocktogon.pull.model.review.ReviewComment
+import inc.kaizen.client.ocktogon.pull.model.reviewer.RequestedReviewer
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

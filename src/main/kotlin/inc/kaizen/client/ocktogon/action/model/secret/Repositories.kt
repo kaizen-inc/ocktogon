@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.action.model.secret
 
-import inc.kaizen.client.repo.model.repo.Repo
+import inc.kaizen.client.ocktogon.repo.model.repo.Repo
 
 data class Repositories(
     val repositories: List<Repo>,

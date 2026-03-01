@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.issue.api
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.ocktogon.user.model.User
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.every

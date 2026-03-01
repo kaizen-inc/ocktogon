@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.orgs.api
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.Team
-import inc.kaizen.client.common.User
-import inc.kaizen.client.orgs.model.*
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.Team
+import inc.kaizen.client.ocktogon.common.User
+import inc.kaizen.client.ocktogon.orgs.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

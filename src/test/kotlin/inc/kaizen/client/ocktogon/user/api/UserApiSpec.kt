@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.user.api
 
-import inc.kaizen.client.common.User
-import inc.kaizen.client.user.model.*
+import inc.kaizen.client.ocktogon.common.User
+import inc.kaizen.client.ocktogon.user.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

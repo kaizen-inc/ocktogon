@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon
 
-import inc.kaizen.base.infrastructure.ApiClient
+import inc.kaizen.infra.podium.ApiClient
 import okhttp3.Interceptor
 
 object Ocktogon {

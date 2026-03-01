@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.secretscanning.api
 
-import inc.kaizen.client.secretscanning.model.SecretScanningAlert
-import inc.kaizen.client.secretscanning.model.SecretScanningAlertLocation
-import inc.kaizen.client.secretscanning.model.UpdateSecretScanningAlertRequest
+import inc.kaizen.client.ocktogon.secretscanning.model.SecretScanningAlert
+import inc.kaizen.client.ocktogon.secretscanning.model.SecretScanningAlertLocation
+import inc.kaizen.client.ocktogon.secretscanning.model.UpdateSecretScanningAlertRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

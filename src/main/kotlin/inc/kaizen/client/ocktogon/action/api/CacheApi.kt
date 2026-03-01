@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.action.api
 
-import inc.kaizen.client.action.model.cache.*
-import inc.kaizen.client.pull.model.Direction
+import inc.kaizen.client.ocktogon.action.model.cache.*
+import inc.kaizen.client.ocktogon.pull.model.Direction
 import retrofit2.Response
 import retrofit2.http.DELETE
 import retrofit2.http.GET

@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.packages.model
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.User
 
 data class Package(
     val id: Int? = null,

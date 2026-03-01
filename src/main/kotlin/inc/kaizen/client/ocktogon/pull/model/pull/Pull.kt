@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.pull.model.pull
 
-import inc.kaizen.client.common.*
+import inc.kaizen.client.ocktogon.common.*
 
 data class Pull(
     val _links: PullRequestLinks? = null,

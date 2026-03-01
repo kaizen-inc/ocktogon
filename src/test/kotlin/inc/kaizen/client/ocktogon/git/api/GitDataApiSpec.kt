@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.git.api
 
-import inc.kaizen.client.git.model.*
+import inc.kaizen.client.ocktogon.git.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.interactions.api
 
-import inc.kaizen.client.interactions.model.InteractionLimit
-import inc.kaizen.client.interactions.model.SetInteractionLimitRequest
+import inc.kaizen.client.ocktogon.interactions.model.InteractionLimit
+import inc.kaizen.client.ocktogon.interactions.model.SetInteractionLimitRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

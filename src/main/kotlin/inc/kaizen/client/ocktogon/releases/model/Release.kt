@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.releases.model
 
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.User
 
 data class Release(
     val assets: List<ReleaseAsset>? = null,

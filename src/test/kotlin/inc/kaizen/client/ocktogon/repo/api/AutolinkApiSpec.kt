@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.Autolink
-import inc.kaizen.client.repo.model.CreateAutolinkRequest
+import inc.kaizen.client.ocktogon.repo.model.Autolink
+import inc.kaizen.client.ocktogon.repo.model.CreateAutolinkRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

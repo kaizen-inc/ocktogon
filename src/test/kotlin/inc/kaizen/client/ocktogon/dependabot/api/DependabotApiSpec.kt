@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.dependabot.api
 
-import inc.kaizen.client.dependabot.model.*
+import inc.kaizen.client.ocktogon.dependabot.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

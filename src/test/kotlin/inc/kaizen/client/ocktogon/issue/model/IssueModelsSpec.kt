@@ -1,10 +1,10 @@
 package inc.kaizen.client.ocktogon.issue.model
 
-import inc.kaizen.client.common.User
-import inc.kaizen.client.issue.model.comment.Comment
-import inc.kaizen.client.issue.model.event.Event
-import inc.kaizen.client.issue.model.issue.Issue
-import inc.kaizen.client.issue.model.label.Label
+import inc.kaizen.client.ocktogon.common.User
+import inc.kaizen.client.ocktogon.issue.model.comment.Comment
+import inc.kaizen.client.ocktogon.issue.model.event.Event
+import inc.kaizen.client.ocktogon.issue.model.issue.Issue
+import inc.kaizen.client.ocktogon.issue.model.label.Label
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 

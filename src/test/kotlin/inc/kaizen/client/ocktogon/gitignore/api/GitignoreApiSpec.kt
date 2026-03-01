@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.gitignore.api
 
-import inc.kaizen.client.gitignore.model.GitignoreTemplate
+import inc.kaizen.client.ocktogon.gitignore.model.GitignoreTemplate
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

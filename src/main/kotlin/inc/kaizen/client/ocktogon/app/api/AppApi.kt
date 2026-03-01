@@ -1,10 +1,10 @@
 package inc.kaizen.client.ocktogon.app.api
 
-import inc.kaizen.client.app.model.App
-import inc.kaizen.client.app.model.Installation
-import inc.kaizen.client.app.model.InstallationRequest
-import inc.kaizen.client.app.model.Installations
-import inc.kaizen.client.app.model.installation.InstallationAccessTokenRequest
+import inc.kaizen.client.ocktogon.app.model.App
+import inc.kaizen.client.ocktogon.app.model.Installation
+import inc.kaizen.client.ocktogon.app.model.InstallationRequest
+import inc.kaizen.client.ocktogon.app.model.Installations
+import inc.kaizen.client.ocktogon.app.model.installation.InstallationAccessTokenRequest
 import retrofit2.Response
 import retrofit2.http.*
 

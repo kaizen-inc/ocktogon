@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.ClonesTraffic
-import inc.kaizen.client.repo.model.TrafficPath
-import inc.kaizen.client.repo.model.TrafficReferrer
-import inc.kaizen.client.repo.model.ViewsTraffic
+import inc.kaizen.client.ocktogon.repo.model.ClonesTraffic
+import inc.kaizen.client.ocktogon.repo.model.TrafficPath
+import inc.kaizen.client.ocktogon.repo.model.TrafficReferrer
+import inc.kaizen.client.ocktogon.repo.model.ViewsTraffic
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

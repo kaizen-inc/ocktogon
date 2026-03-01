@@ -1,10 +1,11 @@
 package inc.kaizen.client.ocktogon.issue.api
 
-import inc.kaizen.client.issue.model.*
-import inc.kaizen.client.issue.model.comment.Comment
-import inc.kaizen.client.issue.model.event.Event
-import inc.kaizen.client.issue.model.issue.Issue
-import inc.kaizen.client.pull.model.Direction
+import inc.kaizen.client.ocktogon.issue.model.*
+import inc.kaizen.client.ocktogon.issue.model.comment.Comment
+import inc.kaizen.client.ocktogon.issue.model.event.Event
+import inc.kaizen.client.ocktogon.issue.model.issue.Issue
+import inc.kaizen.client.ocktogon.pull.model.Direction
+import inc.kaizen.client.ocktogon.pull.model.State
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.every

@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.ContentFile
-import inc.kaizen.client.repo.model.CreateOrUpdateFileRequest
-import inc.kaizen.client.repo.model.DeleteFileRequest
-import inc.kaizen.client.repo.model.FileCommitResponse
+import inc.kaizen.client.ocktogon.repo.model.ContentFile
+import inc.kaizen.client.ocktogon.repo.model.CreateOrUpdateFileRequest
+import inc.kaizen.client.ocktogon.repo.model.DeleteFileRequest
+import inc.kaizen.client.ocktogon.repo.model.FileCommitResponse
 import retrofit2.Response
 import retrofit2.http.*
 

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.activity.api
 
-import inc.kaizen.client.activity.model.Event
+import inc.kaizen.client.ocktogon.activity.model.Event
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

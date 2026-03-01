@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.app.model
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.ocktogon.user.model.User
 
 data class App(
     val id: Long,

@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.activity.api
 
-import inc.kaizen.client.activity.model.MarkNotificationsRequest
-import inc.kaizen.client.activity.model.Notification
-import inc.kaizen.client.activity.model.ThreadSubscription
-import inc.kaizen.client.activity.model.ThreadSubscriptionRequest
+import inc.kaizen.client.ocktogon.activity.model.MarkNotificationsRequest
+import inc.kaizen.client.ocktogon.activity.model.Notification
+import inc.kaizen.client.ocktogon.activity.model.ThreadSubscription
+import inc.kaizen.client.ocktogon.activity.model.ThreadSubscriptionRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

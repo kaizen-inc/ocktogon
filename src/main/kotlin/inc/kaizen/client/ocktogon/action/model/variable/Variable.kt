@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.action.model.variable
 
-import inc.kaizen.client.common.Repository
+import inc.kaizen.client.ocktogon.common.Repository
 
 data class Variable(
     val name: String? = null,

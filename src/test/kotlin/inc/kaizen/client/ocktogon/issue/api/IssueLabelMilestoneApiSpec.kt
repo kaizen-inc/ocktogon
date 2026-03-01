@@ -1,13 +1,13 @@
 package inc.kaizen.client.ocktogon.issue.api
 
-import inc.kaizen.client.common.Label
-import inc.kaizen.client.common.Milestone
-import inc.kaizen.client.common.User
-import inc.kaizen.client.issue.model.AddLabelsRequest
-import inc.kaizen.client.issue.model.AssigneesRequest
-import inc.kaizen.client.issue.model.LabelRequest
-import inc.kaizen.client.issue.model.MilestoneRequest
-import inc.kaizen.client.issue.model.issue.Issue
+import inc.kaizen.client.ocktogon.common.Label
+import inc.kaizen.client.ocktogon.common.Milestone
+import inc.kaizen.client.ocktogon.common.User
+import inc.kaizen.client.ocktogon.issue.model.AddLabelsRequest
+import inc.kaizen.client.ocktogon.issue.model.AssigneesRequest
+import inc.kaizen.client.ocktogon.issue.model.LabelRequest
+import inc.kaizen.client.ocktogon.issue.model.MilestoneRequest
+import inc.kaizen.client.ocktogon.issue.model.issue.Issue
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

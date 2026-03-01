@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.securityadvisories.model
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.Team
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.Team
+import inc.kaizen.client.ocktogon.common.User
 
 data class GlobalSecurityAdvisory(
     val ghsa_id: String? = null,

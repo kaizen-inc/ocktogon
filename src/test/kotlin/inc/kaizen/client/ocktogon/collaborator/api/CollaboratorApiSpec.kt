@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.collaborator.api
 
-import inc.kaizen.client.collaborator.model.CollaboratorPermission
-import inc.kaizen.client.collaborator.model.Permission
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.ocktogon.collaborator.model.CollaboratorPermission
+import inc.kaizen.client.ocktogon.collaborator.model.Permission
+import inc.kaizen.client.ocktogon.user.model.User
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

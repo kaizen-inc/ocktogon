@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.team.model
 
-import inc.kaizen.client.common.Plan
+import inc.kaizen.client.ocktogon.common.Plan
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 

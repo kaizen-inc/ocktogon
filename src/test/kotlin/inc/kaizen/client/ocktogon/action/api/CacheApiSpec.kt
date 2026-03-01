@@ -1,10 +1,10 @@
 package inc.kaizen.client.ocktogon.action.api
 
-import inc.kaizen.client.action.model.cache.ActionCaches
-import inc.kaizen.client.action.model.cache.CacheUsage
-import inc.kaizen.client.action.model.cache.CacheUsagePerRepo
-import inc.kaizen.client.action.model.cache.RepositoryCacheUsage
-import inc.kaizen.client.pull.model.Direction
+import inc.kaizen.client.ocktogon.action.model.cache.ActionCaches
+import inc.kaizen.client.ocktogon.action.model.cache.CacheUsage
+import inc.kaizen.client.ocktogon.action.model.cache.CacheUsagePerRepo
+import inc.kaizen.client.ocktogon.action.model.cache.RepositoryCacheUsage
+import inc.kaizen.client.ocktogon.pull.model.Direction
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

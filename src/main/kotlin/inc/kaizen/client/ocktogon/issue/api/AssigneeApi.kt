@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.issue.api
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.ocktogon.user.model.User
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

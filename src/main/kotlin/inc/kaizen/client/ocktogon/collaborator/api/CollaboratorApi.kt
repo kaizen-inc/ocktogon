@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.collaborator.api
 
-import inc.kaizen.client.collaborator.model.Affiliation
-import inc.kaizen.client.collaborator.model.CollaboratorPermission
-import inc.kaizen.client.collaborator.model.Permission
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.ocktogon.collaborator.model.Affiliation
+import inc.kaizen.client.ocktogon.collaborator.model.CollaboratorPermission
+import inc.kaizen.client.ocktogon.collaborator.model.Permission
+import inc.kaizen.client.ocktogon.user.model.User
 import retrofit2.Response
 import retrofit2.http.*
 

@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.*
-import inc.kaizen.client.repo.model.repo.Repo
+import inc.kaizen.client.ocktogon.repo.model.*
+import inc.kaizen.client.ocktogon.repo.model.repo.Repo
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.action.api
 
-import inc.kaizen.client.action.model.permission.*
+import inc.kaizen.client.ocktogon.action.model.permission.*
 import retrofit2.Response
 import retrofit2.http.*
 

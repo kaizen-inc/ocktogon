@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.search.api
 
-import inc.kaizen.client.search.model.*
+import inc.kaizen.client.ocktogon.search.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

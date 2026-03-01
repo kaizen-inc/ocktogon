@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.issue.model.issue
 
-import inc.kaizen.client.common.Label
-import inc.kaizen.client.common.Milestone
-import inc.kaizen.client.common.User
-import inc.kaizen.client.pull.model.pull.Pull
+import inc.kaizen.client.ocktogon.common.Label
+import inc.kaizen.client.ocktogon.common.Milestone
+import inc.kaizen.client.ocktogon.common.User
+import inc.kaizen.client.ocktogon.pull.model.pull.Pull
 
 data class Issue(
     val active_lock_reason: String? = null,

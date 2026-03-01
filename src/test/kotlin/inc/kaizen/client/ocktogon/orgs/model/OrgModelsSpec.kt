@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.orgs.model
 
-import inc.kaizen.client.common.Organization
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.Organization
+import inc.kaizen.client.ocktogon.common.User
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 

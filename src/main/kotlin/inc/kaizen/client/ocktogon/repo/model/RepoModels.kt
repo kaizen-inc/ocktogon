@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.repo.model
 
-import inc.kaizen.client.common.*
+import inc.kaizen.client.ocktogon.common.*
 
 // --- Autolink ---
 data class Autolink(

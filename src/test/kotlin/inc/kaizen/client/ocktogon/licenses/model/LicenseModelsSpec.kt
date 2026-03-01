@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.licenses.model
 
-import inc.kaizen.client.common.License
+import inc.kaizen.client.ocktogon.common.License
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 

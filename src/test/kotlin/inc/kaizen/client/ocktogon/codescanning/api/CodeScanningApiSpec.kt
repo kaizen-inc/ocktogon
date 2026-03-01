@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.codescanning.api
 
-import inc.kaizen.client.codescanning.model.*
+import inc.kaizen.client.ocktogon.codescanning.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

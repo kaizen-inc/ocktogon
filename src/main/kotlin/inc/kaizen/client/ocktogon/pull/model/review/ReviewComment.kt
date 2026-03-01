@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.pull.model.review
 
-import inc.kaizen.client.common.ReviewCommentLinks
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.ReviewCommentLinks
+import inc.kaizen.client.ocktogon.common.User
 
 data class ReviewComment(
     val _links: ReviewCommentLinks? = null,

@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.git.model
 
-import inc.kaizen.client.common.Actor
-import inc.kaizen.client.common.SimpleCommit
-import inc.kaizen.client.common.Verification
+import inc.kaizen.client.ocktogon.common.Actor
+import inc.kaizen.client.ocktogon.common.SimpleCommit
+import inc.kaizen.client.ocktogon.common.Verification
 
 data class GitBlob(
     val content: String? = null,

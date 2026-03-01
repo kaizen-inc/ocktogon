@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.common.CreateHookRequest
-import inc.kaizen.client.common.Hook
-import inc.kaizen.client.common.HookDelivery
-import inc.kaizen.client.common.UpdateHookRequest
+import inc.kaizen.client.ocktogon.common.CreateHookRequest
+import inc.kaizen.client.ocktogon.common.Hook
+import inc.kaizen.client.ocktogon.common.HookDelivery
+import inc.kaizen.client.ocktogon.common.UpdateHookRequest
 import retrofit2.Response
 import retrofit2.http.*
 

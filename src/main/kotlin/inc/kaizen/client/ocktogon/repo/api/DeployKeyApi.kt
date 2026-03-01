@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.CreateDeployKeyRequest
-import inc.kaizen.client.repo.model.DeployKey
+import inc.kaizen.client.ocktogon.repo.model.CreateDeployKeyRequest
+import inc.kaizen.client.ocktogon.repo.model.DeployKey
 import retrofit2.Response
 import retrofit2.http.*
 

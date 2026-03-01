@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.deployments.model
 
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.User
 
 data class Deployment(
     val url: String? = null,

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.issue.model.comment
 
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.User
 
 data class Comment(
     val author_association: String? = null,

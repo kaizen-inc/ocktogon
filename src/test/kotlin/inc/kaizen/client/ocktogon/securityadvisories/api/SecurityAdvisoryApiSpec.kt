@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.securityadvisories.api
 
-import inc.kaizen.client.securityadvisories.model.*
+import inc.kaizen.client.ocktogon.securityadvisories.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

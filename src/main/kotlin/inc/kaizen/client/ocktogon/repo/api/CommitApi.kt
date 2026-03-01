@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.*
+import inc.kaizen.client.ocktogon.repo.model.*
 import retrofit2.Response
 import retrofit2.http.*
 

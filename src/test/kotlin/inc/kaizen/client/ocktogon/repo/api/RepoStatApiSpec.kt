@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.CommitActivity
-import inc.kaizen.client.repo.model.ContributorStat
-import inc.kaizen.client.repo.model.ParticipationStats
+import inc.kaizen.client.ocktogon.repo.model.CommitActivity
+import inc.kaizen.client.ocktogon.repo.model.ContributorStat
+import inc.kaizen.client.ocktogon.repo.model.ParticipationStats
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

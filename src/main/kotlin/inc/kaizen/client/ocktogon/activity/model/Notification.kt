@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.activity.model
 
-import inc.kaizen.client.common.Repository
+import inc.kaizen.client.ocktogon.common.Repository
 
 data class Notification(
     val id: String? = null,

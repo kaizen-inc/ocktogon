@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.*
+import inc.kaizen.client.ocktogon.repo.model.*
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
@@ -18,7 +18,7 @@ class BranchApiSpec : FunSpec({
     val restrictions = mockk<BranchRestrictionPolicy>()
     val statusChecks = mockk<RequiredStatusChecks>()
     val prReviews = mockk<RequiredPullRequestReviews>()
-    val commit = mockk<inc.kaizen.client.repo.model.RepoCommit>()
+    val commit = mockk<RepoCommit>()
 
     test("listBranches returns branches") {
         coEvery { api.listBranches(owner, repo, any(), any(), any()) } returns branches

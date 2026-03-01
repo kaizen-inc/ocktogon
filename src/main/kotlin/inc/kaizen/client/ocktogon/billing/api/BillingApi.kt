@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.billing.api
 
-import inc.kaizen.client.billing.model.BillingReport
-import inc.kaizen.client.billing.model.PackageBilling
-import inc.kaizen.client.billing.model.StorageBilling
-import inc.kaizen.client.billing.model.TokenBilling
+import inc.kaizen.client.ocktogon.billing.model.BillingReport
+import inc.kaizen.client.ocktogon.billing.model.PackageBilling
+import inc.kaizen.client.ocktogon.billing.model.StorageBilling
+import inc.kaizen.client.ocktogon.billing.model.TokenBilling
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.team.api
 
-import inc.kaizen.client.common.Team
-import inc.kaizen.client.team.model.CreateTeamBody
+import inc.kaizen.client.ocktogon.common.Team
+import inc.kaizen.client.ocktogon.team.model.CreateTeamBody
 import retrofit2.Response
 import retrofit2.http.*
 

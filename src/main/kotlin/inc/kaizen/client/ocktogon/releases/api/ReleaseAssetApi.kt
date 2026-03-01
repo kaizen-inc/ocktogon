@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.releases.api
 
-import inc.kaizen.client.releases.model.ReleaseAsset
-import inc.kaizen.client.releases.model.ReleaseAssetRequest
+import inc.kaizen.client.ocktogon.releases.model.ReleaseAsset
+import inc.kaizen.client.ocktogon.releases.model.ReleaseAssetRequest
 import retrofit2.Response
 import retrofit2.http.*
 

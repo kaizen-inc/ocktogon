@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.pull.model
 
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.User
 
 data class CreatePullRequest(
     val title: String? = null,

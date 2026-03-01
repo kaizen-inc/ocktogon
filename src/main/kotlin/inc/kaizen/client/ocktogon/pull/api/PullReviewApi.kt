@@ -1,6 +1,9 @@
 package inc.kaizen.client.ocktogon.pull.api
 
-import inc.kaizen.client.pull.model.*
+import inc.kaizen.client.ocktogon.pull.model.*
+import inc.kaizen.client.ocktogon.pull.model.pull.Pull
+import inc.kaizen.client.ocktogon.pull.model.review.ReviewComment
+import inc.kaizen.client.ocktogon.pull.model.reviewer.RequestedReviewer
 import retrofit2.http.*
 
 interface PullReviewApi {
@@ -55,7 +58,7 @@ interface PullReviewApi {
         @Path("review_id") reviewId: Long,
         @Query("per_page") perPage: Int = 30,
         @Query("page") page: Int = 1
-    ): List<inc.kaizen.client.pull.model.review.ReviewComment>
+    ): List<ReviewComment>
 
     @POST("/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals")
     suspend fun dismissReview(
@@ -88,7 +91,7 @@ interface PullReviewApi {
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("pull_number") pullNumber: Int
-    ): inc.kaizen.client.pull.model.reviewer.RequestedReviewer
+    ): RequestedReviewer
 
     @POST("/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers")
     suspend fun requestReviewers(
@@ -96,7 +99,7 @@ interface PullReviewApi {
         @Path("repo") repo: String,
         @Path("pull_number") pullNumber: Int,
         @Body body: RequestReviewersRequest
-    ): inc.kaizen.client.pull.model.pull.Pull
+    ): Pull
 
     @DELETE("/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers")
     suspend fun removeRequestedReviewers(
@@ -104,7 +107,7 @@ interface PullReviewApi {
         @Path("repo") repo: String,
         @Path("pull_number") pullNumber: Int,
         @Body body: RequestReviewersRequest
-    ): inc.kaizen.client.pull.model.pull.Pull
+    ): Pull
 }
 
 

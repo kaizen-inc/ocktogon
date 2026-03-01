@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.releases.api
 
-import inc.kaizen.client.releases.model.ReleaseAsset
-import inc.kaizen.client.releases.model.ReleaseAssetRequest
+import inc.kaizen.client.ocktogon.releases.model.ReleaseAsset
+import inc.kaizen.client.ocktogon.releases.model.ReleaseAssetRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.activity.api
 
-import inc.kaizen.client.activity.model.MarkNotificationsRequest
-import inc.kaizen.client.activity.model.Notification
-import inc.kaizen.client.activity.model.ThreadSubscription
-import inc.kaizen.client.activity.model.ThreadSubscriptionRequest
+import inc.kaizen.client.ocktogon.activity.model.MarkNotificationsRequest
+import inc.kaizen.client.ocktogon.activity.model.Notification
+import inc.kaizen.client.ocktogon.activity.model.ThreadSubscription
+import inc.kaizen.client.ocktogon.activity.model.ThreadSubscriptionRequest
 import retrofit2.Response
 import retrofit2.http.*
 

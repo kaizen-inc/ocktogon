@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.secretscanning.api
 
-import inc.kaizen.client.secretscanning.model.SecretScanningAlert
-import inc.kaizen.client.secretscanning.model.SecretScanningAlertLocation
-import inc.kaizen.client.secretscanning.model.UpdateSecretScanningAlertRequest
+import inc.kaizen.client.ocktogon.secretscanning.model.SecretScanningAlert
+import inc.kaizen.client.ocktogon.secretscanning.model.SecretScanningAlertLocation
+import inc.kaizen.client.ocktogon.secretscanning.model.UpdateSecretScanningAlertRequest
 import retrofit2.http.*
 
 interface SecretScanningApi {

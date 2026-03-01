@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.checks.model
 
-import inc.kaizen.client.common.Actor
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.Actor
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.User
 
 data class CheckRun(
     val id: Long? = null,

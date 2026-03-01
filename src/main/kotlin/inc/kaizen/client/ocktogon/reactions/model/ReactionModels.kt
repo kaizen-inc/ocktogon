@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.reactions.model
 
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.User
 
 data class Reaction(
     val id: Int? = null,

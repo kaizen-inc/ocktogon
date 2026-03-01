@@ -1,11 +1,11 @@
 package inc.kaizen.client.ocktogon.issue.api
 
-import inc.kaizen.client.issue.model.*
-import inc.kaizen.client.issue.model.comment.Comment
-import inc.kaizen.client.issue.model.event.Event
-import inc.kaizen.client.issue.model.issue.Issue
-import inc.kaizen.client.pull.model.Direction
-import inc.kaizen.client.pull.model.State
+import inc.kaizen.client.ocktogon.issue.model.*
+import inc.kaizen.client.ocktogon.issue.model.comment.Comment
+import inc.kaizen.client.ocktogon.issue.model.event.Event
+import inc.kaizen.client.ocktogon.issue.model.issue.Issue
+import inc.kaizen.client.ocktogon.pull.model.Direction
+import inc.kaizen.client.ocktogon.pull.model.State
 import retrofit2.http.*
 
 interface IssueApi {
@@ -163,7 +163,7 @@ interface IssueApi {
         @Path("repo") repo: String,
         @Path("comment_id") commentId: Int,
         @retrofit2.http.Body body: UpdateCommentRequest
-    ): inc.kaizen.client.issue.model.comment.Comment
+    ): Comment
 
     @DELETE("/repos/{owner}/{repo}/issues/comments/{comment_id}")
     fun deleteIssueComment(

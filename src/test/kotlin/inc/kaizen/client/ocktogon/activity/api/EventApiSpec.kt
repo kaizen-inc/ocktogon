@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.activity.api
 
-import inc.kaizen.client.activity.model.Event
+import inc.kaizen.client.ocktogon.activity.model.Event
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

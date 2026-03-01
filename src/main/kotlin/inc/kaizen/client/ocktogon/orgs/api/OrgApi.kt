@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.orgs.api
 
-import inc.kaizen.client.common.*
-import inc.kaizen.client.orgs.model.*
+import inc.kaizen.client.ocktogon.common.*
+import inc.kaizen.client.ocktogon.orgs.model.*
 import retrofit2.Response
 import retrofit2.http.*
 

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.releases.model
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.ocktogon.user.model.User
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.meta.api
 
-import inc.kaizen.client.meta.model.GitHubMeta
+import inc.kaizen.client.ocktogon.meta.model.GitHubMeta
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

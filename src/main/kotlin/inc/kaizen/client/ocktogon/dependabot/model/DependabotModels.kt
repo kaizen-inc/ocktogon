@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.dependabot.model
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.User
 
 data class DependabotAlert(
     val number: Int? = null,

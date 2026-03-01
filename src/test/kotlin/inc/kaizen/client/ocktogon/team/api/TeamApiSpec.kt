@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.team.api
 
-import inc.kaizen.client.common.Team
-import inc.kaizen.client.team.model.CreateTeamBody
+import inc.kaizen.client.ocktogon.common.Team
+import inc.kaizen.client.ocktogon.team.model.CreateTeamBody
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

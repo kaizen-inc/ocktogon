@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.gists.api
 
-import inc.kaizen.client.gists.model.*
+import inc.kaizen.client.ocktogon.gists.model.*
 import retrofit2.Response
 import retrofit2.http.*
 

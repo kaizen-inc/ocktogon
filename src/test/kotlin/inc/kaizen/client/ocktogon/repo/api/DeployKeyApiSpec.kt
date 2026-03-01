@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.CreateDeployKeyRequest
-import inc.kaizen.client.repo.model.DeployKey
+import inc.kaizen.client.ocktogon.repo.model.CreateDeployKeyRequest
+import inc.kaizen.client.ocktogon.repo.model.DeployKey
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.search.model
 
-import inc.kaizen.client.common.*
+import inc.kaizen.client.ocktogon.common.*
 
 data class CodeSearchResult(
     val total_count: Int? = null,

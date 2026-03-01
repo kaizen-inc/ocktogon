@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.ClonesTraffic
-import inc.kaizen.client.repo.model.TrafficPath
-import inc.kaizen.client.repo.model.TrafficReferrer
-import inc.kaizen.client.repo.model.ViewsTraffic
+import inc.kaizen.client.ocktogon.repo.model.ClonesTraffic
+import inc.kaizen.client.ocktogon.repo.model.TrafficPath
+import inc.kaizen.client.ocktogon.repo.model.TrafficReferrer
+import inc.kaizen.client.ocktogon.repo.model.ViewsTraffic
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

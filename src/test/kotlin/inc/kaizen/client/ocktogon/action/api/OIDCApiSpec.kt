@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.action.api
 
-import inc.kaizen.client.action.model.oidc.OIDCTemplate
+import inc.kaizen.client.ocktogon.action.model.oidc.OIDCTemplate
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

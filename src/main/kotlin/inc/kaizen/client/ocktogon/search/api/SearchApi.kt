@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.search.api
 
-import inc.kaizen.client.search.model.*
+import inc.kaizen.client.ocktogon.search.model.*
 import retrofit2.http.GET
 import retrofit2.http.Query
 

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.page.model
 
-import inc.kaizen.client.user.model.User
+import inc.kaizen.client.ocktogon.user.model.User
 
 data class PagesBuild(
     val url: String,

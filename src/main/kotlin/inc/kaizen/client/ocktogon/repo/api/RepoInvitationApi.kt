@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.RepoInvitation
-import inc.kaizen.client.repo.model.UpdateInvitationRequest
+import inc.kaizen.client.ocktogon.repo.model.RepoInvitation
+import inc.kaizen.client.ocktogon.repo.model.UpdateInvitationRequest
 import retrofit2.Response
 import retrofit2.http.*
 

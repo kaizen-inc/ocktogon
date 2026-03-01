@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.ratelimit.api
 
-import inc.kaizen.client.ratelimit.model.RateLimitOverview
+import inc.kaizen.client.ocktogon.ratelimit.model.RateLimitOverview
 import retrofit2.http.GET
 
 interface RateLimitApi {

@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.migrations.api
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.migrations.model.Migration
-import inc.kaizen.client.migrations.model.StartMigrationRequest
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.migrations.model.Migration
+import inc.kaizen.client.ocktogon.migrations.model.StartMigrationRequest
 import retrofit2.Response
 import retrofit2.http.*
 

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.codescanning.api
 
-import inc.kaizen.client.codescanning.model.*
+import inc.kaizen.client.ocktogon.codescanning.model.*
 import retrofit2.http.*
 
 interface CodeScanningApi {

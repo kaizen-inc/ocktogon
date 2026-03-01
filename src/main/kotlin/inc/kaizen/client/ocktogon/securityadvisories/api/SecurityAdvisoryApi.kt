@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.securityadvisories.api
 
-import inc.kaizen.client.securityadvisories.model.*
+import inc.kaizen.client.ocktogon.securityadvisories.model.*
 import retrofit2.http.*
 
 interface SecurityAdvisoryApi {

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.checks.api
 
-import inc.kaizen.client.checks.model.*
+import inc.kaizen.client.ocktogon.checks.model.*
 import retrofit2.Response
 import retrofit2.http.*
 

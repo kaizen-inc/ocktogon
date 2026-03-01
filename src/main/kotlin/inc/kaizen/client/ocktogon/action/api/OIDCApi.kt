@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.action.api
 
-import inc.kaizen.client.action.model.oidc.OIDCTemplate
+import inc.kaizen.client.ocktogon.action.model.oidc.OIDCTemplate
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET

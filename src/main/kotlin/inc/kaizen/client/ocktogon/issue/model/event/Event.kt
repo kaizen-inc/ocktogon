@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.issue.model.event
 
-import inc.kaizen.client.common.User
-import inc.kaizen.client.issue.model.issue.Issue
+import inc.kaizen.client.ocktogon.common.User
+import inc.kaizen.client.ocktogon.issue.model.issue.Issue
 
 data class Event(
     val actor: User? = null,

@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.dependabot.api
 
-import inc.kaizen.client.dependabot.model.*
+import inc.kaizen.client.ocktogon.dependabot.model.*
 import retrofit2.Response
 import retrofit2.http.*
 

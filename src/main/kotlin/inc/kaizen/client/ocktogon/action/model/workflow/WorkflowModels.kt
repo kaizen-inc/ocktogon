@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.action.model.workflow
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.User
 
 data class Workflow(
     val id: Long? = null,

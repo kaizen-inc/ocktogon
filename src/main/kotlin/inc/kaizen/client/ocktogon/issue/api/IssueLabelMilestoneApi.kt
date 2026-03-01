@@ -1,12 +1,13 @@
 package inc.kaizen.client.ocktogon.issue.api
 
-import inc.kaizen.client.common.Label
-import inc.kaizen.client.common.Milestone
-import inc.kaizen.client.common.User
-import inc.kaizen.client.issue.model.AddLabelsRequest
-import inc.kaizen.client.issue.model.AssigneesRequest
-import inc.kaizen.client.issue.model.LabelRequest
-import inc.kaizen.client.issue.model.MilestoneRequest
+import inc.kaizen.client.ocktogon.common.Label
+import inc.kaizen.client.ocktogon.common.Milestone
+import inc.kaizen.client.ocktogon.common.User
+import inc.kaizen.client.ocktogon.issue.model.AddLabelsRequest
+import inc.kaizen.client.ocktogon.issue.model.AssigneesRequest
+import inc.kaizen.client.ocktogon.issue.model.LabelRequest
+import inc.kaizen.client.ocktogon.issue.model.MilestoneRequest
+import inc.kaizen.client.ocktogon.issue.model.issue.Issue
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -165,7 +166,7 @@ interface IssueAssigneeApi {
         @Path("repo") repo: String,
         @Path("issue_number") issueNumber: Int,
         @Body body: AssigneesRequest
-    ): inc.kaizen.client.issue.model.issue.Issue
+    ): Issue
 
     @DELETE("/repos/{owner}/{repo}/issues/{issue_number}/assignees")
     suspend fun removeAssignees(
@@ -173,7 +174,7 @@ interface IssueAssigneeApi {
         @Path("repo") repo: String,
         @Path("issue_number") issueNumber: Int,
         @Body body: AssigneesRequest
-    ): inc.kaizen.client.issue.model.issue.Issue
+    ): Issue
 
     @GET("/repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}")
     suspend fun checkUserCanBeAssignedToIssue(

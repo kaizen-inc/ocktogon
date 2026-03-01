@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.app.model
 
-import inc.kaizen.client.app.model.installation.InstallationAccessTokenRequest
-import inc.kaizen.client.app.model.installation.Permissions
+import inc.kaizen.client.ocktogon.app.model.installation.InstallationAccessTokenRequest
+import inc.kaizen.client.ocktogon.app.model.installation.Permissions
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 

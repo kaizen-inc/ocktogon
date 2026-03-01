@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.CommitActivity
-import inc.kaizen.client.repo.model.ContributorStat
-import inc.kaizen.client.repo.model.ParticipationStats
+import inc.kaizen.client.ocktogon.repo.model.CommitActivity
+import inc.kaizen.client.ocktogon.repo.model.ContributorStat
+import inc.kaizen.client.ocktogon.repo.model.ParticipationStats
 import retrofit2.http.GET
 import retrofit2.http.Path
 

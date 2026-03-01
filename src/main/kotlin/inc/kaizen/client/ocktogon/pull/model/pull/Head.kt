@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.pull.model.pull
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.User
 
 data class Head(
     val label: String? = null,

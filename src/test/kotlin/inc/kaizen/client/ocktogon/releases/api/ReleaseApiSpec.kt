@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.releases.api
 
-import inc.kaizen.client.releases.model.Release
-import inc.kaizen.client.releases.model.ReleaseNotes
-import inc.kaizen.client.releases.model.ReleaseNotesRequest
-import inc.kaizen.client.releases.model.ReleaseRequest
+import inc.kaizen.client.ocktogon.releases.model.Release
+import inc.kaizen.client.ocktogon.releases.model.ReleaseNotes
+import inc.kaizen.client.ocktogon.releases.model.ReleaseNotesRequest
+import inc.kaizen.client.ocktogon.releases.model.ReleaseRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

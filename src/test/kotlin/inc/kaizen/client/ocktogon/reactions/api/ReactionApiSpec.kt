@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.reactions.api
 
-import inc.kaizen.client.reactions.model.CreateReactionRequest
-import inc.kaizen.client.reactions.model.Reaction
+import inc.kaizen.client.ocktogon.reactions.model.CreateReactionRequest
+import inc.kaizen.client.ocktogon.reactions.model.Reaction
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

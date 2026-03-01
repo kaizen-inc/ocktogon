@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.pull.model.commit
 
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.User
 
 data class PullCommit(
     val author: User? = null,

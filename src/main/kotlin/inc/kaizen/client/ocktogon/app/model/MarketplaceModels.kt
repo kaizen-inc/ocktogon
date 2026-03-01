@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.app.model
 
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.common.User
 
 data class MarketplacePlan(
     val url: String? = null,

@@ -1,9 +1,9 @@
 package inc.kaizen.client.ocktogon.activity.api
 
-import inc.kaizen.client.activity.model.RepoSubscription
-import inc.kaizen.client.activity.model.SetRepoSubscriptionRequest
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.common.User
+import inc.kaizen.client.ocktogon.activity.model.RepoSubscription
+import inc.kaizen.client.ocktogon.activity.model.SetRepoSubscriptionRequest
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.common.User
 import retrofit2.Response
 import retrofit2.http.*
 

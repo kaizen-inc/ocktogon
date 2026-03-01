@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.gitignore.api
 
-import inc.kaizen.client.gitignore.model.GitignoreTemplate
+import inc.kaizen.client.ocktogon.gitignore.model.GitignoreTemplate
 import retrofit2.http.GET
 import retrofit2.http.Path
 

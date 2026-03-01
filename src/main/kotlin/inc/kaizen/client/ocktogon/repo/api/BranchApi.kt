@@ -1,6 +1,8 @@
 package inc.kaizen.client.ocktogon.repo.api
 
-import inc.kaizen.client.repo.model.*
+import inc.kaizen.client.ocktogon.pull.model.reviewer.Team
+import inc.kaizen.client.ocktogon.repo.model.*
+import inc.kaizen.client.ocktogon.user.model.User
 
 import retrofit2.Response
 import retrofit2.http.*
@@ -158,12 +160,12 @@ interface BranchApi {
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("branch") branch: String
-    ): List<inc.kaizen.client.common.Team>
+    ): List<Team>
 
     @GET("/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users")
     suspend fun getUsersWithAccessToProtectedBranch(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
         @Path("branch") branch: String
-    ): List<inc.kaizen.client.common.User>
+    ): List<User>
 }

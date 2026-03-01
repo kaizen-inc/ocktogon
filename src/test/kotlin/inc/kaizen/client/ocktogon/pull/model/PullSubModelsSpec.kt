@@ -1,16 +1,16 @@
 package inc.kaizen.client.ocktogon.pull.model
 
-import inc.kaizen.client.common.HRef
-import inc.kaizen.client.pull.model.commit.Commit
-import inc.kaizen.client.pull.model.commit.PullCommit
-import inc.kaizen.client.pull.model.commit.Tree
-import inc.kaizen.client.pull.model.commit.Verification
-import inc.kaizen.client.pull.model.file.PullFile
-import inc.kaizen.client.pull.model.pull.Head
-import inc.kaizen.client.pull.model.pull.Links
-import inc.kaizen.client.pull.model.pull.RequestedTeam
-import inc.kaizen.client.pull.model.review.ReviewComment
-import inc.kaizen.client.pull.model.reviewer.RequestedReviewer
+import inc.kaizen.client.ocktogon.common.HRef
+import inc.kaizen.client.ocktogon.pull.model.commit.Commit
+import inc.kaizen.client.ocktogon.pull.model.commit.PullCommit
+import inc.kaizen.client.ocktogon.pull.model.commit.Tree
+import inc.kaizen.client.ocktogon.pull.model.commit.Verification
+import inc.kaizen.client.ocktogon.pull.model.file.PullFile
+import inc.kaizen.client.ocktogon.pull.model.pull.Head
+import inc.kaizen.client.ocktogon.pull.model.pull.Links
+import inc.kaizen.client.ocktogon.pull.model.pull.RequestedTeam
+import inc.kaizen.client.ocktogon.pull.model.review.ReviewComment
+import inc.kaizen.client.ocktogon.pull.model.reviewer.RequestedReviewer
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
@@ -85,7 +85,7 @@ class PullSubModelsSpec : StringSpec({
 
     "review.Links should instantiate and compare correctly" {
         val href = HRef(href = "https://api.github.com")
-        val links = inc.kaizen.client.pull.model.review.Links(self = href, html = href, pull_request = href)
+        val links = inc.kaizen.client.ocktogon.pull.model.review.Links(self = href, html = href, pull_request = href)
         links.self?.href shouldBe "https://api.github.com"
         links.pull_request?.href shouldBe "https://api.github.com"
     }

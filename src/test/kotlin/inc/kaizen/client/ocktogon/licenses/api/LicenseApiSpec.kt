@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.licenses.api
 
-import inc.kaizen.client.common.License
-import inc.kaizen.client.licenses.model.LicenseSimple
-import inc.kaizen.client.licenses.model.RepoLicenseContent
+import inc.kaizen.client.ocktogon.common.License
+import inc.kaizen.client.ocktogon.licenses.model.LicenseSimple
+import inc.kaizen.client.ocktogon.licenses.model.RepoLicenseContent
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

@@ -1,8 +1,8 @@
 package inc.kaizen.client.ocktogon.migrations.api
 
-import inc.kaizen.client.common.Repository
-import inc.kaizen.client.migrations.model.Migration
-import inc.kaizen.client.migrations.model.StartMigrationRequest
+import inc.kaizen.client.ocktogon.common.Repository
+import inc.kaizen.client.ocktogon.migrations.model.Migration
+import inc.kaizen.client.ocktogon.migrations.model.StartMigrationRequest
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery

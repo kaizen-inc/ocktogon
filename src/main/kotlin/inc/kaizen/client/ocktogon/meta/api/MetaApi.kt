@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.meta.api
 
-import inc.kaizen.client.meta.model.GitHubMeta
+import inc.kaizen.client.ocktogon.meta.model.GitHubMeta
 import retrofit2.http.GET
 import retrofit2.http.Query
 

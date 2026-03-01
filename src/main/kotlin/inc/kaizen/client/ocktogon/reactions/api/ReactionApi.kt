@@ -1,7 +1,7 @@
 package inc.kaizen.client.ocktogon.reactions.api
 
-import inc.kaizen.client.reactions.model.CreateReactionRequest
-import inc.kaizen.client.reactions.model.Reaction
+import inc.kaizen.client.ocktogon.reactions.model.CreateReactionRequest
+import inc.kaizen.client.ocktogon.reactions.model.Reaction
 import retrofit2.Response
 import retrofit2.http.*
 

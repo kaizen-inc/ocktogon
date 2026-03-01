@@ -1,6 +1,6 @@
 package inc.kaizen.client.ocktogon.pull.model.pull
 
-import inc.kaizen.client.common.HRef
+import inc.kaizen.client.ocktogon.common.HRef
 
 // Links now uses common HRef
 data class Links(
