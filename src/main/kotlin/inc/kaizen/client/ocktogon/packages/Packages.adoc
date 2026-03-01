@@ -1,0 +1,53 @@
+= Packages API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub Packages (container, npm, maven, gradle, nuget, rubygems) at the organization, authenticated user, and specific user level.
+
+== PackageApi — Organization Packages
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/orgs/{org}/packages` | List packages for an organization
+| GET | `/orgs/{org}/packages/{package_type}/{package_name}` | Get a package for an organization
+| DELETE | `/orgs/{org}/packages/{package_type}/{package_name}` | Delete a package for an organization
+| POST | `/orgs/{org}/packages/{package_type}/{package_name}/restore` | Restore a package for an organization
+| GET | `/orgs/{org}/packages/{package_type}/{package_name}/versions` | List package versions for an organization
+| GET | `/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}` | Get a package version for an organization
+| DELETE | `/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}` | Delete a package version for an organization
+| POST | `/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore` | Restore a package version for an organization
+|===
+
+== PackageApi — Authenticated User Packages
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/user/packages` | List packages for the authenticated user
+| GET | `/user/packages/{package_type}/{package_name}` | Get a package for the authenticated user
+| DELETE | `/user/packages/{package_type}/{package_name}` | Delete a package for the authenticated user
+| POST | `/user/packages/{package_type}/{package_name}/restore` | Restore a package for the authenticated user
+| GET | `/user/packages/{package_type}/{package_name}/versions` | List package versions for the authenticated user
+| GET | `/user/packages/{package_type}/{package_name}/versions/{package_version_id}` | Get a package version for the authenticated user
+| DELETE | `/user/packages/{package_type}/{package_name}/versions/{package_version_id}` | Delete a package version for the authenticated user
+| POST | `/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore` | Restore a package version for the authenticated user
+|===
+
+== PackageApi — User Packages
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/users/{username}/packages` | List packages for a user
+| GET | `/users/{username}/packages/{package_type}/{package_name}` | Get a package for a user
+| DELETE | `/users/{username}/packages/{package_type}/{package_name}` | Delete a package for a user
+| POST | `/users/{username}/packages/{package_type}/{package_name}/restore` | Restore a package for a user
+| GET | `/users/{username}/packages/{package_type}/{package_name}/versions` | List package versions for a user
+| GET | `/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}` | Get a package version for a user
+| DELETE | `/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}` | Delete a package version for a user
+| POST | `/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore` | Restore a package version for a user
+|===
+
+*Supported `package_type` values:* `npm`, `maven`, `rubygems`, `docker`, `nuget`, `container`
+
+*Models:* `Package`, `PackageVersion`, `PackageVersionMetadata`, `ContainerMetadata`, `DockerMetadata`
+

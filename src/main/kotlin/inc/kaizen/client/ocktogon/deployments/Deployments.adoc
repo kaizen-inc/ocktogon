@@ -1,0 +1,42 @@
+= Deployments API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing deployments, deployment statuses, and environments (including branch policies and protection rules).
+
+== DeploymentApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/deployments` | List deployments
+| POST | `/repos/{owner}/{repo}/deployments` | Create a deployment
+| GET | `/repos/{owner}/{repo}/deployments/{deployment_id}` | Get a deployment
+| DELETE | `/repos/{owner}/{repo}/deployments/{deployment_id}` | Delete a deployment
+| GET | `/repos/{owner}/{repo}/deployments/{deployment_id}/statuses` | List deployment statuses
+| POST | `/repos/{owner}/{repo}/deployments/{deployment_id}/statuses` | Create a deployment status
+| GET | `/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/{status_id}` | Get a deployment status
+|===
+*Models:* `Deployment`, `DeploymentStatus`, `CreateDeploymentRequest`, `CreateDeploymentStatusRequest`
+
+== EnvironmentApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/environments` | List environments
+| GET | `/repos/{owner}/{repo}/environments/{environment_name}` | Get an environment
+| PUT | `/repos/{owner}/{repo}/environments/{environment_name}` | Create or update an environment
+| DELETE | `/repos/{owner}/{repo}/environments/{environment_name}` | Delete an environment
+| GET | `/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies` | List deployment branch policies
+| POST | `/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies` | Create a deployment branch policy
+| GET | `/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}` | Get a deployment branch policy
+| PUT | `/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}` | Update a deployment branch policy
+| DELETE | `/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}` | Delete a deployment branch policy
+| GET | `/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules` | List deployment protection rules
+| POST | `/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules` | Create a deployment protection rule
+| GET | `/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps` | List custom deployment rule integrations
+| GET | `/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}` | Get a deployment protection rule
+| DELETE | `/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}` | Disable a deployment protection rule
+|===
+*Models:* `Environment`, `EnvironmentsResponse`, `DeploymentBranchPolicy`, `DeploymentProtectionRule`, `CreateEnvironmentRequest`, `CreateDeploymentBranchPolicyRequest`
+

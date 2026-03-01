@@ -1,0 +1,24 @@
+= Teams API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub teams within organizations.
+For full team management including discussions and member administration, see the `orgs` package `OrgTeamApi`.
+
+== TeamApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/orgs/{org}/teams` | List teams in an org
+| POST | `/orgs/{org}/teams` | Create a team
+| GET | `/orgs/{org}/teams/{team_slug}` | Get a team by name
+| PATCH | `/orgs/{org}/teams/{team_slug}` | Update a team
+| DELETE | `/orgs/{org}/teams/{team_slug}` | Delete a team
+| GET | `/user/teams` | List teams for authenticated user
+|===
+
+*Models:* `common.Team`, `CreateTeamBody`
+
+NOTE: Full team management (members, repos, discussions) is in `orgs.api.OrgTeamApi`.
+

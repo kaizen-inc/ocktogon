@@ -1,0 +1,36 @@
+= Migrations API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for migrating organization and user data in/out of GitHub.
+
+== OrgMigrationApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/orgs/{org}/migrations` | List organization migrations
+| POST | `/orgs/{org}/migrations` | Start an organization migration
+| GET | `/orgs/{org}/migrations/{migration_id}` | Get an organization migration status
+| GET | `/orgs/{org}/migrations/{migration_id}/archive` | Download an organization migration archive
+| DELETE | `/orgs/{org}/migrations/{migration_id}/archive` | Delete an organization migration archive
+| DELETE | `/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock` | Unlock an organization repository
+| GET | `/orgs/{org}/migrations/{migration_id}/repositories` | List repositories in an organization migration
+|===
+
+== UserMigrationApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/user/migrations` | List user migrations
+| POST | `/user/migrations` | Start a user migration
+| GET | `/user/migrations/{migration_id}` | Get a user migration status
+| GET | `/user/migrations/{migration_id}/archive` | Download a user migration archive
+| DELETE | `/user/migrations/{migration_id}/archive` | Delete a user migration archive
+| DELETE | `/user/migrations/{migration_id}/repos/{repo_name}/lock` | Unlock a user repository
+| GET | `/user/migrations/{migration_id}/repositories` | List repositories in a user migration
+|===
+
+*Models:* `Migration`, `StartMigrationRequest`
+*Shared Models:* `common.Repository`, `common.User`
+

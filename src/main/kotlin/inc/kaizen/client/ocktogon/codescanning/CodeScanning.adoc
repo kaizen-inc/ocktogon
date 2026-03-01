@@ -1,0 +1,29 @@
+= Code Scanning API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for code scanning alerts, analyses, CodeQL databases, and SARIF uploads.
+
+== CodeScanningApi
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/orgs/{org}/code-scanning/alerts` | List code scanning alerts for an organization
+| GET | `/repos/{owner}/{repo}/code-scanning/alerts` | List code scanning alerts for a repository
+| GET | `/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}` | Get a code scanning alert
+| PATCH | `/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}` | Update a code scanning alert
+| GET | `/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances` | List instances of a code scanning alert
+| GET | `/repos/{owner}/{repo}/code-scanning/analyses` | List code scanning analyses for a repository
+| GET | `/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}` | Get a code scanning analysis
+| DELETE | `/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}` | Delete a code scanning analysis
+| GET | `/repos/{owner}/{repo}/code-scanning/codeql/databases` | List CodeQL databases
+| GET | `/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}` | Get a CodeQL database
+| GET | `/repos/{owner}/{repo}/code-scanning/default-setup` | Get default setup configuration
+| PATCH | `/repos/{owner}/{repo}/code-scanning/default-setup` | Update default setup configuration
+| POST | `/repos/{owner}/{repo}/code-scanning/sarifs` | Upload an analysis as SARIF data
+| GET | `/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}` | Get information about a SARIF upload
+|===
+
+*Models:* `CodeScanningAlert`, `CodeScanningRule`, `CodeScanningTool`, `CodeScanningAlertInstance`, `CodeScanningAnalysis`, `CodeqlDatabase`, `CodeScanningDefaultSetup`, `SarifUploadInfo`
+

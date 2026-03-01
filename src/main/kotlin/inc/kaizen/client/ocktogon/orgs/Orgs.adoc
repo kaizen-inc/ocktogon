@@ -1,0 +1,65 @@
+= Organizations API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub organizations, members, teams, webhooks, roles and more.
+
+== API Interfaces
+
+=== OrgApi — Organization Management
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/organizations` | List organizations
+| GET | `/user/orgs` | List orgs for authenticated user
+| GET | `/users/{username}/orgs` | List orgs for a user
+| GET | `/orgs/{org}` | Get an organization
+| PATCH | `/orgs/{org}` | Update an organization
+| DELETE | `/orgs/{org}` | Delete an organization
+| GET | `/orgs/{org}/members` | List organization members
+| GET | `/orgs/{org}/members/{username}` | Check organization membership for a user
+| DELETE | `/orgs/{org}/members/{username}` | Remove an organization member
+| GET/PUT/DELETE | `/orgs/{org}/memberships/{username}` | Get/Set/Remove org membership
+| GET/PATCH | `/user/memberships/orgs` | List/Update org memberships for authenticated user
+| GET | `/orgs/{org}/public_members` | List public org members
+| PUT/DELETE | `/orgs/{org}/public_members/{username}` | Set/Remove public org membership
+| GET | `/orgs/{org}/outside_collaborators` | List outside collaborators
+| PUT/DELETE | `/orgs/{org}/outside_collaborators/{username}` | Convert/Remove outside collaborator
+| GET | `/orgs/{org}/invitations` | List pending invitations
+| POST | `/orgs/{org}/invitations` | Create an invitation
+| DELETE | `/orgs/{org}/invitations/{invitation_id}` | Cancel invitation
+| GET | `/orgs/{org}/invitations/{invitation_id}/teams` | List invitation teams
+| GET | `/orgs/{org}/failed_invitations` | List failed invitations
+| GET/PUT/DELETE | `/orgs/{org}/blocks/{username}` | Block/Unblock users
+| GET | `/orgs/{org}/credential-authorizations` | List SAML SSO authorizations
+| DELETE | `/orgs/{org}/credential-authorizations/{credential_id}` | Remove SAML SSO authorization
+| GET | `/orgs/{org}/audit-log` | Get the audit log
+| GET/POST | `/orgs/{org}/hooks` | List/Create webhooks
+| GET/PATCH/DELETE | `/orgs/{org}/hooks/{hook_id}` | Get/Update/Delete webhook
+| POST | `/orgs/{org}/hooks/{hook_id}/pings` | Ping webhook
+| GET | `/orgs/{org}/hooks/{hook_id}/deliveries` | List webhook deliveries
+| GET/POST | `…/deliveries/{delivery_id}/attempts` | Get/Redeliver delivery
+| GET/POST/GET/PATCH/DELETE | `/orgs/{org}/custom_roles…` | Custom roles management
+|===
+*Models:* `OrgMembership`, `OrgInvitation`, `CredentialAuthorization`, `CustomRole`, `UpdateOrgRequest`
+
+=== OrgTeamApi — Teams & Discussions
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET/POST | `/orgs/{org}/teams` | List/Create teams
+| GET/PATCH/DELETE | `/orgs/{org}/teams/{team_slug}` | Get/Update/Delete team
+| GET | `/orgs/{org}/teams/{team_slug}/members` | List team members
+| GET/PUT/DELETE | `/orgs/{org}/teams/{team_slug}/memberships/{username}` | Manage team membership
+| GET | `/orgs/{org}/teams/{team_slug}/repos` | List team repos
+| GET/PUT/DELETE | `/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}` | Team repo permissions
+| GET | `/orgs/{org}/teams/{team_slug}/teams` | List child teams
+| GET/POST | `/orgs/{org}/teams/{team_slug}/discussions` | List/Create discussions
+| GET/PATCH/DELETE | `/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}` | Manage discussions
+| GET/POST | `…/discussions/{discussion_number}/comments` | List/Create discussion comments
+| GET/PATCH/DELETE | `…/comments/{comment_number}` | Manage comments
+| GET | `/user/teams` | List teams for authenticated user
+|===
+*Models:* `TeamMembership`, `TeamDiscussion`, `TeamDiscussionComment`, `CreateTeamRequest`, `UpdateTeamRequest`
+

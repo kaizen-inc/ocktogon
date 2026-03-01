@@ -1,0 +1,161 @@
+= Repository API
+:toc:
+:toclevels: 3
+
+== Overview
+Endpoints for managing GitHub repositories, branches, commits, contents, webhooks, statistics, traffic, deploy keys, autolinks, and invitations.
+
+== API Interfaces
+
+=== RepoApi — Base Repository Management
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/user/repos` | List repos for authenticated user
+| GET | `/users/{username}/repos` | List repos for a user
+| GET | `/orgs/{org}/repos` | List org repos
+| POST | `/user/repos` | Create repo for authenticated user
+| POST | `/orgs/{org}/repos` | Create org repo
+| GET | `/repos/{owner}/{repo}` | Get a repository
+| PATCH | `/repos/{owner}/{repo}` | Update a repository
+| DELETE | `/repos/{owner}/{repo}` | Delete a repository
+| POST | `/repos/{owner}/{repo}/forks` | Create a fork
+| GET | `/repos/{owner}/{repo}/forks` | List forks
+| POST | `/repos/{owner}/{repo}/transfer` | Transfer a repository
+| GET | `/repos/{owner}/{repo}/topics` | Get topics
+| PUT | `/repos/{owner}/{repo}/topics` | Replace topics
+| GET | `/repos/{owner}/{repo}/languages` | List languages
+| GET | `/repos/{owner}/{repo}/tags` | List tags
+| GET | `/repos/{owner}/{repo}/teams` | List teams
+| GET | `/repositories` | List public repositories
+| GET | `/repos/{owner}/{repo}/vulnerability-alerts` | Check vulnerability alerts
+| PUT/DELETE | `/repos/{owner}/{repo}/vulnerability-alerts` | Enable/Disable vulnerability alerts
+| PUT/DELETE | `/repos/{owner}/{repo}/automated-security-fixes` | Enable/Disable automated security fixes
+| POST | `/repos/{template_owner}/{template_repo}/generate` | Create repo from template
+|===
+*Models:* `Repo` (alias `common.Repository`), `TopicsResponse`, `RepoTag`, `CreateRepoRequest`, `UpdateRepoRequest`, `ForkRequest`, `TransferRepoRequest`
+
+=== ContentApi — File Contents
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/readme` | Get README
+| GET | `/repos/{owner}/{repo}/readme/{dir}` | Get README in directory
+| GET | `/repos/{owner}/{repo}/contents/{path}` | Get file or directory
+| PUT | `/repos/{owner}/{repo}/contents/{path}` | Create or update file
+| DELETE | `/repos/{owner}/{repo}/contents/{path}` | Delete a file
+| GET | `/repos/{owner}/{repo}/tarball/{ref}` | Download tarball archive
+| GET | `/repos/{owner}/{repo}/zipball/{ref}` | Download zipball archive
+|===
+*Models:* `ContentFile`, `FileCommitResponse`, `RepoCommitDetail`, `CreateOrUpdateFileRequest`, `DeleteFileRequest`
+
+=== CommitApi — Commits & Statuses
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/commits` | List commits
+| GET | `/repos/{owner}/{repo}/commits/{ref}` | Get a commit
+| GET | `/repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head` | List branches for head commit
+| GET/POST | `/repos/{owner}/{repo}/commits/{commit_sha}/comments` | List/Create commit comments
+| GET | `/repos/{owner}/{repo}/comments` | List repo commit comments
+| GET/PATCH/DELETE | `/repos/{owner}/{repo}/comments/{comment_id}` | Get/Update/Delete commit comment
+| GET | `/repos/{owner}/{repo}/commits/{ref}/statuses` | List commit statuses
+| POST | `/repos/{owner}/{repo}/statuses/{sha}` | Create a commit status
+| GET | `/repos/{owner}/{repo}/commits/{ref}/status` | Get combined status for a ref
+| GET | `/repos/{owner}/{repo}/compare/{basehead}` | Compare two commits
+|===
+*Models:* `RepoCommit`, `CommitComment`, `CommitStatus`, `CombinedCommitStatus`, `CommitComparison`, `CommitData`, `CommitStats`, `CommitFile`
+
+=== BranchApi — Branches & Protection
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/branches` | List branches
+| GET | `/repos/{owner}/{repo}/branches/{branch}` | Get a branch
+| POST | `/repos/{owner}/{repo}/branches/{branch}/rename` | Rename a branch
+| POST | `/repos/{owner}/{repo}/merges` | Merge a branch
+| POST | `/repos/{owner}/{repo}/merge-upstream` | Sync a fork branch with upstream
+| GET/PUT/DELETE | `/repos/{owner}/{repo}/branches/{branch}/protection` | Get/Update/Delete branch protection
+| GET/PATCH/DELETE | `…/protection/required_status_checks` | Status check protection
+| GET/PATCH/DELETE | `…/protection/required_pull_request_reviews` | PR review protection
+| GET/POST/DELETE | `…/protection/enforce_admins` | Admin enforcement
+| GET/DELETE | `…/protection/restrictions` | Access restrictions
+| GET | `…/restrictions/apps` | Apps with access
+| GET | `…/restrictions/teams` | Teams with access
+| GET | `…/restrictions/users` | Users with access
+|===
+*Models:* `Branch`, `BranchProtection`, `RequiredStatusChecks`, `RequiredPullRequestReviews`, `BranchRestrictionPolicy`, `ProtectedBranchAdminEnforced`
+
+=== RepoHookApi — Webhooks
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/hooks` | List webhooks
+| POST | `/repos/{owner}/{repo}/hooks` | Create webhook
+| GET/PATCH/DELETE | `/repos/{owner}/{repo}/hooks/{hook_id}` | Get/Update/Delete webhook
+| POST | `/repos/{owner}/{repo}/hooks/{hook_id}/pings` | Ping webhook
+| POST | `/repos/{owner}/{repo}/hooks/{hook_id}/tests` | Test push webhook
+| GET | `/repos/{owner}/{repo}/hooks/{hook_id}/deliveries` | List deliveries
+| GET | `/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}` | Get delivery
+| POST | `…/deliveries/{delivery_id}/attempts` | Redeliver a delivery
+|===
+*Models:* `common.Hook`, `common.HookDelivery`
+
+=== RepoStatApi — Statistics
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/stats/contributors` | Contributor commit activity
+| GET | `/repos/{owner}/{repo}/stats/commit_activity` | Last year of commit activity
+| GET | `/repos/{owner}/{repo}/stats/code_frequency` | Weekly commit activity
+| GET | `/repos/{owner}/{repo}/stats/participation` | Weekly commit count
+| GET | `/repos/{owner}/{repo}/stats/punch_card` | Hourly commit count
+|===
+*Models:* `ContributorStat`, `CommitActivity`, `ParticipationStats`
+
+=== RepoTrafficApi — Traffic
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/traffic/clones` | Get clones
+| GET | `/repos/{owner}/{repo}/traffic/popular/paths` | Top referral paths
+| GET | `/repos/{owner}/{repo}/traffic/popular/referrers` | Top referral sources
+| GET | `/repos/{owner}/{repo}/traffic/views` | Get page views
+|===
+*Models:* `ClonesTraffic`, `ViewsTraffic`, `TrafficPath`, `TrafficReferrer`
+
+=== DeployKeyApi — Deploy Keys
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/keys` | List deploy keys
+| POST | `/repos/{owner}/{repo}/keys` | Create deploy key
+| GET | `/repos/{owner}/{repo}/keys/{key_id}` | Get deploy key
+| DELETE | `/repos/{owner}/{repo}/keys/{key_id}` | Delete deploy key
+|===
+*Models:* `DeployKey`, `CreateDeployKeyRequest`
+
+=== AutolinkApi — Autolinks
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/autolinks` | List autolinks
+| POST | `/repos/{owner}/{repo}/autolinks` | Create autolink
+| GET | `/repos/{owner}/{repo}/autolinks/{autolink_id}` | Get autolink
+| DELETE | `/repos/{owner}/{repo}/autolinks/{autolink_id}` | Delete autolink
+|===
+*Models:* `Autolink`, `CreateAutolinkRequest`
+
+=== RepoInvitationApi — Invitations
+[cols="1,2,3", options="header"]
+|===
+| Method | Endpoint | Description
+| GET | `/repos/{owner}/{repo}/invitations` | List repo invitations
+| PATCH | `/repos/{owner}/{repo}/invitations/{invitation_id}` | Update invitation
+| DELETE | `/repos/{owner}/{repo}/invitations/{invitation_id}` | Delete invitation
+| GET | `/user/repository_invitations` | List invitations for authenticated user
+| PATCH | `/user/repository_invitations/{invitation_id}` | Accept invitation
+| DELETE | `/user/repository_invitations/{invitation_id}` | Decline invitation
+|===
+*Models:* `RepoInvitation`, `UpdateInvitationRequest`
+
